@@ -4,7 +4,7 @@
 
 Here is how you can start developing on the AppBuilder today:
 
-- [install and setup your environment](setup/Setup.md)\
+- [install and setup your environment](setup/Setup.md) \
   ([old setup instructions](setup/oldSetup/Setup.md))
 
 - [TODO: Error reporting]
