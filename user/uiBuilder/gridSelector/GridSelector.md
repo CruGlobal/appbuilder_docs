@@ -1,4 +1,4 @@
-[< User Instructions](../../index)
+[< User Instructions](../../Index.md)
 
 # Use a Grid as a Selector
 

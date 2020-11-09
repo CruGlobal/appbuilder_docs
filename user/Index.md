@@ -25,7 +25,7 @@
 ## Processes
 
 [Process Manager Guide](processes/pmGuide/ProcessManager.md)\
-[Insert Record Task](processes/insertRecordTask/InsetRecordTask.md)
+[Insert Record Task](processes/insertRecordTask/InsertRecordTask.md)
 
 ## User Interface Builder
 

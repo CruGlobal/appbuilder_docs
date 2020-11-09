@@ -1,4 +1,4 @@
-[< User Instructions](../../index)
+[< User Instructions](../../Index.md)
 
 # System Task: Insert Record
 
