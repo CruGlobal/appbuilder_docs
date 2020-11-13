@@ -8,7 +8,9 @@ The comment widget requires an object for storing the comments. The comments obj
 
 ## Properties
 
-**Data Source** - Choose the data collection with an object to store comments.\
+**Data Source** - Choose the data collection with an object to store comments.
+
 Map the correct fields to these property options:
-**Select a user field**, **Select a comment field**, **Select a date field**\
+**Select a user field**, **Select a comment field**, **Select a date field**
+
 **Height** - adjust the vertical space the comment widget uses.

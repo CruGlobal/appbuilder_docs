@@ -12,5 +12,6 @@ If the current selection of the Data Collection (Data Source) passes the [filter
 
 ## Properties
 
-**Data Source** - Data collection to use in the condition.\
+**Data Source** - Data collection to use in the condition.
+
 **Filter Data** - [Filter](../../../concepts/recordRules/RecordRules.md) as the condition of which container to display.
