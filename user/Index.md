@@ -13,6 +13,7 @@
 [Insert Record Task](processes/insertRecordTask/InsertRecordTask.md)
 
 **User Interface Builder**\
+[Widgets](uiBuilder/widgets/Widgets.md)\
 [Use a Grid as a Selector](uiBuilder/gridSelector/GridSelector.md)
 
 **Roles & Permissions**\
