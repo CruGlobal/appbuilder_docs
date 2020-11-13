@@ -19,8 +19,8 @@ The Chart widget itself is a container that has properties to load data. An addi
 **Value Column 2** - If using Multiple Series select the secondary value.\
 **Percentage** - Select percentage if you wish to show a percent rather than the value. This is relative to the total of the entire series.\
 **Display Label** - Unselect to hide the labels from the Chart\
-**Label Position** -
-**Height** -
+**Label Position** - ?\
+**Height** - Adjust the vertical space the chart container uses
 
 ## Chart Type Properties
 
@@ -38,14 +38,14 @@ Most chart types show these properties along with custom options explained below
 
 ### Pie
 
-**Chart Type** - Choose from the three display types
+**Chart Type** - Choose from the three display types\
 ![](images/pie.png)\
 **Inner Font Size** - Adjust the font displaying the values on the chart
 
 ### Bar
 
 **Chart Type** - Choose to display the bars horizontally or vertically\
-**Chart Preset** - Choose how the bars will display.
+**Chart Preset** - Choose how the bars will display.\
 ![](images/bar.png)
 
 ### Line

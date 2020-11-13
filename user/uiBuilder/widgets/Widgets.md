@@ -2,6 +2,6 @@
 
 # Widgets
 
-[Chart](chart\Chart.md)\
-[CSV Importer](csvImporter/csvImporter.md)\
+[Chart](chart/Chart.md)\
+[CSV Importer](csvImporter/CsvImporter.md)\
 [CSV Exporter](csvExporter/CsvExporter.md)

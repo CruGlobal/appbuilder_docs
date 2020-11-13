@@ -1,4 +1,4 @@
-[< Concepts](../../Index.md)
+[< User Instructions](../../Index.md)
 
 # Record Rules
 
