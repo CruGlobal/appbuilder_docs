@@ -3,7 +3,8 @@
 # Widgets
 
 [Carousel](carousel/Carousel.md)\
-[Comment](comment/Comment.md)\
 [Chart](chart/Chart.md)\
+[Comment](comment/Comment.md)\
+[Conditional Container](conditionalContainer/ConditionalContainer.md)\
 [CSV Importer](csvImporter/CsvImporter.md)\
 [CSV Exporter](csvExporter/CsvExporter.md)
