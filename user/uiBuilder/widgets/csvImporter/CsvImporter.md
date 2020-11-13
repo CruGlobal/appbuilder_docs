@@ -12,7 +12,7 @@ This widget will display a button that opens a CSV Import tool. In the CSV impor
 
 ### Rules
 
-**Record Rules** - select settings then add, to add a record rule. This rule will be applied to each record imported.
+**Record Rules** - select settings then add, to add a [record rule](../../../concepts/recordRules/RecordRules.md). This rule will be applied to each record imported.
 
 ### Customize display
 

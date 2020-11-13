@@ -6,7 +6,8 @@
 [Video - Making a Donations App](https://drive.google.com/file/d/1XsPauIOWJl6_vxaAJATo7l3e-TJIMdhO/view?usp=sharing)
 
 **Concepts**\
-[Filters](concepts/filters/Filters.md)
+[Filters](concepts/filters/Filters.md)\
+[Record Rules](concepts/recordRules/RecordRules.md)
 
 **Processes**\
 [Process Manager Guide](processes/pmGuide/ProcessManager.md)\
