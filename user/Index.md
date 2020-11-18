@@ -14,6 +14,7 @@
 [Insert Record Task](processes/insertRecordTask/InsertRecordTask.md)
 
 **User Interface Builder**\
+[Pages](uiBuilder/pages/Pages.md)\
 [Widgets](uiBuilder/widgets/Widgets.md)\
 [Use a Grid as a Selector](uiBuilder/gridSelector/GridSelector.md)
 
