@@ -12,4 +12,5 @@
 [Label](label/Label.md)\
 [Layout](layout/Layout.md)\
 [List](list/List.md)\
+[Image](image/Image.md)\
 ...
