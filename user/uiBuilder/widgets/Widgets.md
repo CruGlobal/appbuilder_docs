@@ -14,4 +14,5 @@
 [List](list/List.md)\
 [Image](image/Image.md)\
 [Menu](menu/Menu.md)\
+[Text](text/Text.md)\
 ...
