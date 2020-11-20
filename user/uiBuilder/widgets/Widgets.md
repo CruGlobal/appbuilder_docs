@@ -9,6 +9,7 @@
 [CSV Importer](csvImporter/CsvImporter.md)\
 [CSV Exporter](csvExporter/CsvExporter.md)\
 [Data View](dataview/DataView.md)\
+[Detail](detail/Detail.md)
 [Label](label/Label.md)\
 [Layout](layout/Layout.md)\
 [List](list/List.md)\
