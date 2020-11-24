@@ -9,7 +9,8 @@
 [CSV Importer](csvImporter/CsvImporter.md)\
 [CSV Exporter](csvExporter/CsvExporter.md)\
 [Data View](dataview/DataView.md)\
-[Detail](detail/Detail.md)
+[Detail](detail/Detail.md)\
+[Docx Builder](docx/Docx.md)\
 [Form](form/Form.md)\
 [Grid](grid/Grid.md)\
 [Image](image/Image.md)\
