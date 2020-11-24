@@ -11,11 +11,11 @@
 [Data View](dataview/DataView.md)\
 [Detail](detail/Detail.md)
 [Grid](grid/Grid.md)\
+[Form](form/Form.md)\
 [Label](label/Label.md)\
 [Layout](layout/Layout.md)\
 [List](list/List.md)\
 [Image](image/Image.md)\
 [Menu](menu/Menu.md)\
 [Tab](tab/Tab.md)\
-[Text](text/Text.md)\
-...
+[Text](text/Text.md)
