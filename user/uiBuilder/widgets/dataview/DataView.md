@@ -4,7 +4,7 @@
 
 This widget displays a card for each record of the given data collection.
 
-After selecting the data source detail fields are added to the layout. These can be reordered or removed. Text and [label](../label/Label.md) widgets can be added to customize the look of the card.
+After selecting the data source detail fields are added to the layout. These can be reordered or removed. [Text](../text/Text.md) and [label](../label/Label.md) widgets can be added to customize the look of the card.
 
 ## Properties
 

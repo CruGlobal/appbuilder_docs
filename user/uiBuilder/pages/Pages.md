@@ -24,9 +24,9 @@ There are 3 main page types that behave differently.
 
 These pages can be any of the 3 types above. Adding the corresponding widget to the page allows them to be linked from certain widgets, such as a grid.
 
-**Detail Page** - This requires a detail widget with a data collection matching the data collection in the widget linked from.
+**Detail Page** - This requires a [detail widget](../widgets/detail/Detail.md) with a data collection matching the data collection in the widget linked from.
 
-**Edit Form** - This requires a form widget with a data collection matching the data collection in the widget linked from.
+**Edit Form** - This requires a [form widget](../widgets/form/Form.md) with a data collection matching the data collection in the widget linked from.
 
 ## Properties
 

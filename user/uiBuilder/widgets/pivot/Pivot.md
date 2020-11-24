@@ -14,7 +14,7 @@ After selecting a data source, in the workspace select configure to set up the p
 
 **Height** - Adjust the widget height.
 
-**Remove empty data** - Select to hide empty Rows.\
+**Remove empty data** - Select to hide empty Rows.
 
 > TODO: Not clear what this does.
 
