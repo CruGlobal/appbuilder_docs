@@ -10,12 +10,13 @@
 [CSV Exporter](csvExporter/CsvExporter.md)\
 [Data View](dataview/DataView.md)\
 [Detail](detail/Detail.md)
-[Grid](grid/Grid.md)\
 [Form](form/Form.md)\
+[Grid](grid/Grid.md)\
+[Image](image/Image.md)\
+[Kanban](kanban/Kanban.md)\
 [Label](label/Label.md)\
 [Layout](layout/Layout.md)\
 [List](list/List.md)\
-[Image](image/Image.md)\
 [Menu](menu/Menu.md)\
 [Pivot](pivot/Pivot.md)\
 [Tab](tab/Tab.md)\
