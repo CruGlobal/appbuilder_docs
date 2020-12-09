@@ -1,3 +1,7 @@
+---
+category: Widget
+---
+
 [< Widgets](../Widgets.md)
 
 # Comment
