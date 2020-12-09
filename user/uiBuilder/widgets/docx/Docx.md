@@ -22,7 +22,7 @@ Create a loop:
 ```
 
 Insert an image:\
-`{%image field}`
+`{% raw  %}{%image field}{% endraw  %}`
 
 Insert the Sum of a field:\
 `{$sum?number field}`
