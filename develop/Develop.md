@@ -1,3 +1,11 @@
+---
+title: Develop
+is-category: develop
+category: home
+layout: index
+icon: fa-laptop-code
+---
+
 [< Overview](../README.md)
 
 # Developers

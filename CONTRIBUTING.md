@@ -1,4 +1,8 @@
-[< Overview](README.md)
+---
+title: Contributing
+category: home
+layout: page
+---
 
 # Contributing to Documentation
 
@@ -34,12 +38,12 @@ Try to follow the existing hierarchy when adding documentation. Add a page folde
 
 ## Format
 
-Start the file with a back link to the most applicable index/topic page.
-
 ```markdown
-[< Previous Index](../Index.md)
-
-# Title
+---
+title: My Page Title
+category: Category
+description: This description will show beside the title on the menu page.
+---
 
 ## Heading
 
@@ -50,4 +54,29 @@ Start the file with a back link to the most applicable index/topic page.
 ######
 ```
 
-Start with a title using heading 1 (`#`). Only use this heading once for the title. Start with heading 2 (`##`) and adding one level for each nested heading. Do not skip heading levels.
+### Front matter
+
+The YAML front matter is processed by Jekyll and used to display the page on the correct category pages.
+
+**title** - Page title\
+**category** - Which category page should link to this page.
+**description** - (Optional) Adds a description to the Category Page to provide additional context.
+**icon** - (Optional) a font awesome icon (starting with fa-). The icon will display in the breadcrumbs header.
+
+### Content
+
+Start with heading 2 (`##`) and add one level for each nested heading. Do not skip levels.
+
+## Tips
+
+1. Jekyll uses Liquid templating. Using {% raw %}`{{`, `}}`, `{%`, or`%}` {% endraw %} in markdown will cause problems. Use
+   `{% raw %}{%{% endraw %} raw {% raw %} %} ... {% {% endraw %} endraw {% raw %}%}{% endraw %}` tags to wrap these characters.
+2. You can add notifications:
+
+   ```liquid
+   {% raw %}{% include notification.html message="This is the message for the notification" %}{% endraw %}
+   ```
+
+   {% include notification.html message="This is the message for the notification" %}
+
+3.

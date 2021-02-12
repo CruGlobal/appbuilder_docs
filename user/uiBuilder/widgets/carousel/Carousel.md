@@ -1,7 +1,9 @@
 ---
-category: Widget
+category: widgets
+title: Carousel
+description: Short description of file
 ---
-
+{% include navbar.html category=page.category title=page.title%}
 [< Widgets](../Widgets.md)
 
 # Carousel

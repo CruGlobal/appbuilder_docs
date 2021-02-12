@@ -28,7 +28,7 @@ This sets the value based on the record that triggered the project. From here yo
 ![](./images/setFrom.png)
 
 - **[primary key]** use this to set a connected record field (_1:M only_) as connected to the root Object. This will only work if the field you are setting is connected to the object you are connecting.
-- **field** the first options show any field in the root object. Pick what value you want. If the field you are setting is string numbers and indexes can be used but will be converted to a string
+- **field** the first options show any field in the root object. Pick what value you want. If the field you are setting is a string, numbers and indexes can be used but will be converted to a string
 - **object ->** This notation is used to access values from connected records attached to the root object.
 
 #### Set by previous step data

@@ -4,7 +4,7 @@
 
 ## Overview
 
-AppBuilder data can be accessed on the Cordova mobile app through the `ABObject` and `ABDataCollection` classes. These classes know how to request data from the server through the ABRelay system and then store their respective info into the device's local storage. 
+AppBuilder data can be accessed on the Cordova mobile app through the `ABObject` and `ABDataCollection` classes. These classes know how to request data from the server through the ABRelay system and then store their respective info into the device's local storage.
 
 An ABObject on the mobile framework represents an AppBuilder Object on the server. Each ABObject knows how to take its local data out of storage, and then later push any changes to it back to the server. (Storage is handled locally on the mobile device by an encrypted asynchronous key-value system with an SQLite back end. It is distinct from `localStorage`, which is a plaintext synchronous key-value system native to JavaScript.)
 
@@ -52,9 +52,9 @@ Framework7 is a JavaScript based framework and UI library for mobile apps. We ma
 <template>
     <div class="page">
         <div class="page-content">
-            {{#if showMessage}}
+            {% raw %}{{#if showMessage}}
                 <p>{{message}}</p>
-            {{/if}}
+            {% raw %}{{/if}}{% endraw %}
         </div>
     </div>
 </template>
@@ -67,16 +67,16 @@ Framework7 is a JavaScript based framework and UI library for mobile apps. We ma
                 message: "Hello World"
             }
         },
-        
+
         on: {
             pageInit: function() {
                 ...
             },
-            
+
             pageBeforeIn: function() {
                 ...
             },
-            
+
             pageBeforeRemove: function() {
                 ...
             }
@@ -131,13 +131,13 @@ That is how we bring the ABMobileApp, ABApplication, and ABObject into the Frame
 
 In the mobile framework, the ABMobileApps are located in `/www/lib/app/applications`. Each application has its own subdirectory there. Within each subdirectory, there should at least be a few core files:
 
-- `app.js`: This is the controller that defines how the ABMobileApp will function. This is the controller that initializes ABObjects and ABDataCollections, and keeps a working copy of their data in the ABMobileApp object itself. 
+- `app.js`: This is the controller that defines how the ABMobileApp will function. This is the controller that initializes ABObjects and ABDataCollections, and keeps a working copy of their data in the ABMobileApp object itself.
 
 - `config_app.js`: This is basically a data dump of the ABApplication's row from the server database. The mobile framework will reference its `json` property.
 
 - `routes.js`: This defines the Framework7 page routing for the ABApplication on the mobile device. Typically, the routes will point to .html files in the `templates` subdirectory for the various component pages.
 
-There are also various other files for managing the various ABObject types used by the application. For example, the Events application has `objEvent.js`, `objRegistration.js`, `objSubEvent.js`, and so on. These are all sub classes of `objBase.js`. (I assume that the 'obj' refers to their purpose of controlling ABObject data.) 
+There are also various other files for managing the various ABObject types used by the application. For example, the Events application has `objEvent.js`, `objRegistration.js`, `objSubEvent.js`, and so on. These are all sub classes of `objBase.js`. (I assume that the 'obj' refers to their purpose of controlling ABObject data.)
 ```
 /data/www/lib/app/applications/events/objBase.js
 /data/www/lib/app/applications/events/objEvents.js
@@ -160,10 +160,10 @@ In the `/www/lib/app/applications/events/app.js` you'll see this:
 ```javascript
 // a lookup of our local data and the object .id in our AB json
 var ObjHash = {
-    "Events": "d16ac465-5a1f-429e-809c-e3d05d43a2e6", 
-    "Registrations": "8504e326-a0b4-4300-9657-930f4832f6eb", 
-    "Registrants": "e0b32645-71d1-451b-8de0-40cb4b6e5ae7", 
-    "Charges": "ae08ab76-9202-4346-9738-31a7af2cfece", 
+    "Events": "d16ac465-5a1f-429e-809c-e3d05d43a2e6",
+    "Registrations": "8504e326-a0b4-4300-9657-930f4832f6eb",
+    "Registrants": "e0b32645-71d1-451b-8de0-40cb4b6e5ae7",
+    "Charges": "ae08ab76-9202-4346-9738-31a7af2cfece",
     "Fees": "b4df10a0-cffc-4578-8b39-742641042acd",
     "SubEvents": "fe0f5a03-096e-49fd-9884-51e59e2b3955",
     "Schedules" : "4351f546-66e5-4354-be35-d16bb30bb837",
@@ -184,14 +184,14 @@ initializeLocalData() {
     for (var o in ObjHash) {
         allOperations.push(this.lookupData(ObjHash[o], o));
     }
-    
+
     return Promise.all(allOperations);
 }
 ```
-    
+
 
 During this process, each key in the `this.lookupData(id, key)` then becomes a:  
-- `App.obj[Key]`: reference to the ABObject 
+- `App.obj[Key]`: reference to the ABObject
 - `App.data[Key]`: reference to the local data for this ABObject
 - `App.get[Key]`: returns the local data
 - `App.refresh[Key]`: a method to reload the data from local storage
@@ -217,7 +217,7 @@ Now the `.initializeRemoteData()` function is supposed to initiate a call to the
 
 So, we take those tables that are expected to be fully downloaded, and request a full download of those:
 ```javascript
-// these are the system data objects we need to just get all the 
+// these are the system data objects we need to just get all the
 // data from:
 var remoteLookupObjects = ['Events', 'Fees', 'SubEvents'];
 remoteLookupObjects.forEach((rlo)=>{
