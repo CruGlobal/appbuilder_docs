@@ -264,6 +264,12 @@ So, if you wanted to follow this same pattern, I'd start by:
 - Make sure your App is in `.status == 'ready'`  before going to your template file.
 - In your template file, start requesting your local objects and asking them for their data there.
 
+## quick example diagram
+
+Note, this is two seperate movements
+user's QR code from Server to Mobile
+Server's list of Data collections from Server to Mobile
+![alt_text](connectapptoserver.jpeg "image_tooltip")
 
 
 

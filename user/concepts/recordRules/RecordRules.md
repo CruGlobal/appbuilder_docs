@@ -10,7 +10,8 @@ After adding a new rule an action must be selected.
 
 **Update Record** - This action allows you to change values on the current record (submitted in the form).\
 **Insert Connected Object** - This action creates a record that is connected to the form record. After selecting this action choose the connected record field to insert. Then values for the new record can set.\
-**Update Connected Record** - This action changes or sets values on a connected record (that already exists). After selecting this actions choose the connected record field to update. Then set which values to update on the connected record
+**Update Connected Record** - This action changes or sets values on a connected record (that already exists). After selecting this actions choose the connected record field to update. Then set which values to update on the connected record.\
+**Remove Connected Record** - This action can remove a connected record from the submitted record. This removes the connection only, the record will not be deleted.
 
 ## Values
 
