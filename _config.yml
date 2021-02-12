@@ -1,10 +1,11 @@
 plugins:
   - jekyll-relative-links
+  - kramdown-parser-gfm
 relative_links:
   enabled: true
   collections: true
 include:
   - README.md
   - CONTRIBUTING.md
-
-theme: jekyll-theme-cayman
+remote_theme: chrisrhymes/bulma-clean-theme
+fixed_navbar: top

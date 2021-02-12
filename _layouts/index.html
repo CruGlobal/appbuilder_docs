@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="columns">
+  <div class="column is-4">
+    <div class="section sidebar pt-0">
+      {% include categoryTree.html parent=page.category current = page.is-category %}
+    </div>
+  </div>
+  <div class="column is-8">
+    {% include pagelist.html category=page.is-category %}
+    <div class="content">{{content}}</div>
+  </div>
+</div>
