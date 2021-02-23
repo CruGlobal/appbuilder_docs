@@ -1,6 +1,7 @@
-[< User Documents](../../Index.md)
-
-# Image
+---
+category: widgets
+title: Image
+---
 
 Displays an uploaded image.
 

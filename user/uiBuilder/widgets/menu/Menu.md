@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Menu
+---
+category: widgets
+title: Menu
+---
 
 Displays a menu bar with a title and links to other pages.
 

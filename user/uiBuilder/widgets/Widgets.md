@@ -1,12 +1,7 @@
 ---
 title: Widgets
-category: user
+category: ui
 is-category: widgets
 layout: index
+fa-icon: fa-boxes
 ---
-
-[< User Documents](../../Index.md)
-
-# Widgets
-
-{% include pagelist.html category=page.is-category %}

@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Grid
+---
+category: widgets
+title: Grid
+---
 
 Display a table with a multiple records.
 

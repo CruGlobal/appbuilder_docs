@@ -1,9 +1,7 @@
-<!-- Copy and paste the converted output. -->
-
-[< Develop](../../Develop.md)
-
-# End-to-End Testing Guide
-
+---
+title: End-to-End Testing Guide
+category: develop
+---
 ## Testing Philosophy & Goals
 
 The key considerations for end-to-end testing are:

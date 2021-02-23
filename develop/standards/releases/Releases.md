@@ -1,4 +1,8 @@
-# Releases
+---
+title: Releases
+category: develop
+description: versioning and release strategy
+---
 This is the release strategy for **[appdevdesigns/app_builder](github.com/appdevdesigns/app_builder)**.
 
 Create [releases on GitHub](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) for each new version.

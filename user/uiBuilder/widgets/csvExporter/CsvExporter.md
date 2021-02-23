@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# CSV Exporter
+---
+category: widgets
+title: CSV Exporter
+---
 
 This widget will display a button that creates a CSV file based on the Data Collection it is configured with.
 

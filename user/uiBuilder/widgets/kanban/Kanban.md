@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Kanban
+---
+category: widgets
+title: Kanban
+---
 
 Display a kanban board with columns and cards. Kanban is a project management system. [Learn more about Kanban](https://blog.trello.com/kanban-101).
 

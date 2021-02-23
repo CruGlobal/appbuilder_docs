@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Conditional Container
+---
+category: widgets
+title: Conditional Container
+---
 
 The conditional container allows to different items to be shown to a user based on a condition.
 
@@ -17,9 +18,9 @@ If the current selection of the Data Collection (Data Source) passes the [filter
 **Filter Data** - [Filter](../../../concepts/recordRules/RecordRules.md) as the condition of which container to display.
 
 ## useage
- 
+
 First, ask yourself if you should just have seperate pages and seperate data collections.
-Maitenance on this widget shouldn't be taken lightly, so know what you're doing before commiting yourself to it. 
+Maitenance on this widget shouldn't be taken lightly, so know what you're doing before commiting yourself to it.
 
 A cursor has to be set on the data collection the conditional widget is checking – as it isn’t checking the whole object but rather the **single record** that happens to be the current selection in that collection.
 
@@ -78,4 +79,3 @@ And when the user clicks it, this is what is actually updated. \
 
 
 ![alt_text](images/image6.png "image_tooltip")
-

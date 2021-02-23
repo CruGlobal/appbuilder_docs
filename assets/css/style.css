@@ -42,3 +42,10 @@ html {
 .main-content{
   min-height: calc(100vh - 20rem)
 }
+
+iframe {
+  width: 755px;
+  height: 424px;
+  max-width: 100%;
+  max-height: calc((100vw - 40px) / (16/9));
+}

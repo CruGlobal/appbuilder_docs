@@ -1,6 +1,7 @@
-[< User Instructions](../../Index.md)
-
-# Use a Grid as a Selector
+---
+title: Use a Grid as a Selector
+category: ui
+---
 
 A grid can be used a selector, where selecting a specific item from the grid that displays in other widgets on the page.
 

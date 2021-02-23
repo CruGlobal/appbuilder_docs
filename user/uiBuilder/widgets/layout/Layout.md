@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Layout
+---
+category: widgets
+title: Layout
+---
 
 This widget is container used to arrange other widgets allowing for complex page layouts. Widgets added to the layout are displayed in line horizontally.
 

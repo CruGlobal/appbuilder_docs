@@ -1,7 +1,7 @@
-[< Concepts](../Concepts.md)
-
-# AppBuilder Backend Design
-
+---
+title: AppBuilder Backend Design
+category: dev-concepts
+---
 _Draft: Updated 01-Oct-2020_  
 [Original Google Doc](https://docs.google.com/document/d/19MqSXec6je2YkFUOnr7c5pDhP9odYYbK3zI79XRqUEo/edit)
 
@@ -288,47 +288,61 @@ Note that the _key_ field within the json field may define specific UI elements 
 
 > **_TODO:_** will this database potentially go away when OpsPortal is deprecated??
 
-**_NOTE:_** The contents of `appbuilder_definition` can be (partially) pulled via the AppBuilder interface by hitting the gear icon (<kbd>![](images/image2.png)</kbd>) for any given app, and selecting export (<kbd>![alt_text](images/image1.png "image_tooltip")</kbd>)
+**_NOTE:_** The contents of `appbuilder_definition` can be (partially) pulled via the AppBuilder interface by hitting the gear icon (<span class='tag'>![](images/image2.png)</span>) for any given app, and selecting export (<span class='tag'>![alt_text](images/image1.png "image_tooltip")</span>)
 
 <table>
   <tr>
-   <th><strong>Table: appbuilder_definition</strong>
-   </th>
+    <th><strong>Table: appbuilder_definition</strong></th>
   </tr>
   <tr>
-   <td><strong>Description:</strong>
-   <p>
-   This is one of the most important tables to understand. AppBuilder application relationships are all stored in this table.  The relationships are defined within the <em>json</em> column.
-   <p>
-   In order to "recreate" an app, you can look for rows of the type <strong>application</strong>.  These are the most top-level items.  The <em>json<strong> </strong></em>column describes the various relationships in the app, and contains references to other objects found within this table that are of the various <em>type</em> listed below.  For a visual representation of this idea, please see the section <a href="#app-structure">App Structure</a>.
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        This is one of the most important tables to understand. AppBuilder
+        application relationships are all stored in this table. The
+        relationships are defined within the <em>json</em> column.
+      </p>
+
+      <p>
+        In order to "recreate" an app, you can look for rows of the type
+        <strong>application</strong>. These are the most top-level items. The
+        <em>json<strong> </strong></em>column describes the various
+        relationships in the app, and contains references to other objects found
+        within this table that are of the various <em>type</em> listed below.
+        For a visual representation of this idea, please see the section
+        <a href="#app-structure">App Structure</a>.
+      </p>
+    </td>
+
   </tr>
   <tr>
-   <td><strong>Code reference:</strong> <code>app_builder/api/models/ABDefinitionModel.js</code>
-   </td>
+    <td>
+      <strong>Code reference:</strong>
+      <code>app_builder/api/models/ABDefinitionModel.js</code>
+    </td>
   </tr>
   <tr>
-   <td>
-    <img src="images/image8.png"/><br>
-    <strong>Fields:</strong><br>
-      <em>id</em><br><br>
-      <em>name</em><br><br>
+    <td>
+      <img src="images/image8.png" /><br />
+      <strong>Fields:</strong><br />
+      <em>id</em><br /><br />
+      <em>name</em><br /><br />
       <em>type</em>:
       <ul>
-        <li><strong>view,</strong>
-        <li><strong>field,</strong>
-        <li><strong>datacollection,</strong>
-        <li><strong>application,</strong>
-        <li><strong>object,</strong>
-        <li><strong>field,</strong>
-        <li><strong>query</strong>
+        <li><strong>view,</strong></li>
+        <li><strong>field,</strong></li>
+        <li><strong>datacollection,</strong></li>
+        <li><strong>application,</strong></li>
+        <li><strong>object,</strong></li>
+        <li><strong>field,</strong></li>
+        <li><strong>query</strong></li>
       </ul>
-   </td>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Example:</strong>
-    <pre><code>id:   0475ad1e-9e18-41be-9e55-92b0962260eb
+    <td>
+      <strong>Example:</strong>
+      <pre><code>id:   0475ad1e-9e18-41be-9e55-92b0962260eb
 name: items Form.datepicker
 type: view
 json: {
@@ -350,36 +364,37 @@ json: {
     id":"0475ad1e-9e18-41be-9e55-92b0962260eb"
 }
 createdAt:	2020-09-07 10:14:14
-updatedAt:	2020-09-07 10:14:14</code></pre>
-   </td>
+updatedAt:	2020-09-07 10:14:14
+</code></pre>
+    </td>
   </tr>
 </table>
 
 <table>
   <tr>
-   <th><strong>Table: site_multilingual_label</strong>
-   </th>
+    <th><strong>Table: site_multilingual_label</strong></th>
   </tr>
   <tr>
-   <td>
-    <strong>Description:</strong>
-    <p>
-    strings that are displayed in the AppBuilder interface of the UI
-    <p>
-    "developer strings, not appbuilder strings"
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        strings that are displayed in the AppBuilder interface of the UI
+      </p>
+
+      <p>
+        "developer strings, not appbuilder strings"
+      </p>
+    </td>
+
   </tr>
   <tr>
-   <td><strong>Code reference:</strong>
-   </td>
+    <td><strong>Code reference:</strong></td>
   </tr>
   <tr>
-   <td><strong>Fields:</strong>
-   </td>
+    <td><strong>Fields:</strong></td>
   </tr>
   <tr>
-   <td><code>Example:</code>
-   </td>
+    <td><code>Example:</code></td>
   </tr>
 </table>
 
@@ -400,58 +415,62 @@ At a minimum, each of these contains the following columns:
 
 <table>
   <tr>
-   <th><strong>Table: </strong>AB_SYSTEM_ROLE
-   </th>
+    <th><strong>Table: </strong>AB_SYSTEM_ROLE</th>
   </tr>
   <tr>
-   <td>
-    <strong>Description: </strong>
-    <p>
-    This table is a predefined table for managing AppBuilder roles. It is actually an AppBuilder Object.
-   </td>
+    <td>
+      <strong>Description: </strong>
+      <p>
+        This table is a predefined table for managing AppBuilder roles. It is
+        actually an AppBuilder Object.
+      </p>
+    </td>
   </tr>
   <tr>
-  <td><strong>Code reference: </strong><code>app_builder/api/systemObjects/role.js</code>
-   </td>
+    <td>
+      <strong>Code reference: </strong><code>app_builder/api/systemObjects/role.js</code>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Fields:</stong>
-    <pre><code class='sql'>    `uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+    <td>
+      <strong>Fields:</strong>
+      <pre><code class='sql'>    `uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
     `created_at` datetime DEFAULT NULL,
     `updated_at` datetime DEFAULT NULL,
     `properties` text COLLATE utf8_unicode_ci DEFAULT NULL,
     `translations` text COLLATE utf8_unicode_ci DEFAULT NULL,
     `users` text COLLATE utf8_unicode_ci DEFAULT NULL,
     PRIMARY KEY (`uuid`)</code></pre>
-   </td>
+    </td>
   </tr>
   <tr>
-   <td><strong>Example:</strong>
-   </td>
+    <td><strong>Example:</strong></td>
   </tr>
 </table>
 
 <table>
   <tr>
-   <th><strong>Table: </strong>AB_SYSTEM_SCOPE
-   </th>
+    <th><strong>Table: </strong>AB_SYSTEM_SCOPE</th>
   </tr>
   <tr>
-   <td>
-    <strong>Description:</strong>
-    <p>
-    This table is a predefined table for managing AppBuilder scopes.  It is actually an AppBuilder Object.
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        This table is a predefined table for managing AppBuilder scopes. It is
+        actually an AppBuilder Object.
+      </p>
+    </td>
   </tr>
   <tr>
-   <td><strong>Code reference:</strong> <code>app_builder/api/systemObjects/scope.js</code>
-   </td>
+    <td>
+      <strong>Code reference:</strong>
+      <code>app_builder/api/systemObjects/scope.js</code>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Fields:</strong>
-    <pre><code class='sql'>    `uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+    <td>
+      <strong>Fields:</strong>
+      <pre><code class='sql'>    `uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
     `created_at` datetime DEFAULT NULL,
     `updated_at` datetime DEFAULT NULL,
     `properties` text COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -461,36 +480,45 @@ At a minimum, each of these contains the following columns:
     `filter` text COLLATE utf8_unicode_ci DEFAULT NULL,
     `allowAll` tinyint(1) DEFAULT NULL,
     PRIMARY KEY (`uuid`)</code></pre>
-   </td>
+    </td>
   </tr>
   <tr>
-   <td><strong>Example:</strong>
-   </td>
+    <td><strong>Example:</strong></td>
   </tr>
 </table>
 
 <table>
   <tr>
-   <th><strong>Table Template: </strong>AB_<strong><em>{AppName}_{ObjectName}</em></strong>
-   </th>
+    <th>
+      <strong>Table Template: </strong>AB_<strong
+        ><em>{AppName}_{ObjectName}</em></strong
+      >
+    </th>
   </tr>
   <tr>
-   <td>
-    <strong>Description:</strong>
-    <p>
-    This table is dynamically generated and stores the data for an AppBuilder Object.
-    <p>
-    An AppBuilder Object can contain a number of different "dataFields."
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        This table is dynamically generated and stores the data for an
+        AppBuilder Object.
+      </p>
+
+      <p>
+        An AppBuilder Object can contain a number of different "dataFields."
+      </p>
+    </td>
+
   </tr>
   <tr>
-   <td>
-    <strong>Code reference for the table:</strong>
-    <pre><code>  app_builder/api/classes/platform/ABObject.js (<em>includes:)</em>
+    <td>
+      <strong>Code reference for the table:</strong>
+      <pre><code>  app_builder/api/classes/platform/ABObject.js (<em>includes:)</em>
   app_builder/api/classes/core/ABObjectCore.js</code></pre>
-    <p>
-    <strong>Code reference for allowed data types:</strong>
-    <pre><code>  app_builder/api/classes/platform/dataFields/ABFieldAutoIndex.js
+      <p>
+        <strong>Code reference for allowed data types:</strong>
+      </p>
+
+      <pre><code> app_builder/api/classes/platform/dataFields/ABFieldAutoIndex.js
   app_builder/api/classes/platform/dataFields/ABFieldBoolean.js
   app_builder/api/classes/platform/dataFields/ABFieldCalculate.js
   app_builder/api/classes/platform/dataFields/ABFieldCombine.js
@@ -512,24 +540,28 @@ At a minimum, each of these contains the following columns:
   app_builder/api/classes/platform/dataFields/ABFieldTree.js
   app_builder/api/classes/platform/dataFields/ABFieldUser.js
   app_builder/api/classes/platform/dataFields/[template].js</code></pre>
-   </td>
+
+</td>
+
   </tr>
   <tr>
-   <td>
-   <strong>Fields:</strong>
-    <pre><code class='sql'>`uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+    <td>
+      <strong>Fields:</strong>
+      <pre><code class='sql'>`uuid` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 `created_at` datetime DEFAULT NULL,
 `updated_at` datetime DEFAULT NULL,
 `properties` text COLLATE utf8_unicode_ci DEFAULT NULL,</code></pre>
-    <strong>Plus user-defined fields:</strong>
-    <blockquote>TODO: create an object that contains every type (dataFields)
-    and then extract the SQL from it to place here</blockquote>
-   </td>
+      <strong>Plus user-defined fields:</strong>
+      <blockquote>
+        TODO: create an object that contains every type (dataFields) and then
+        extract the SQL from it to place here
+      </blockquote>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Example:</strong>
-    <pre><code class='sql'> {
+    <td>
+      <strong>Example:</strong>
+      <pre><code class='sql'> {
     "id": "f8ee19c3-554c-4354-8cff-63310a1d9ae0",
     "name": "Name",
     "type": "field",
@@ -556,76 +588,83 @@ At a minimum, each of these contains the following columns:
     "createdAt": null,
     "updatedAt": "2020-09-24T20:57:51.000Z"
   }</code></pre>
-   </td>
+    </td>
   </tr>
 </table>
 
 <table>
   <tr>
-   <th><strong>Table Template:</strong> AB_<strong><em>{AppName}_View{QueryName}</em></strong>
-   </th>
+    <th>
+      <strong>Table Template:</strong> AB_<strong>
+      <em>{AppName}_View{QueryName}</em></strong>
+    </th>
   </tr>
   <tr>
-   <td>
-    <strong>Description:</strong>
-    <p>
-    AppBuilder Query - stored as a SQL view.
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        AppBuilder Query - stored as a SQL view.
+      </p>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Code reference:</strong>
-    <p>
-    <code>??</code>
-   </td>
+    <td>
+      <strong>Code reference:</strong>
+      <p>
+        <code>??</code>
+      </p>
+    </td>
   </tr>
   <tr>
-   <td><strong>Fields:</strong>
-   </td>
+    <td><strong>Fields:</strong></td>
   </tr>
   <tr>
-   <td>
-    <strong>Example:</strong>
-	  <pre><code>AB_AccountingApp_ViewAccount
+    <td>
+      <strong>Example:</strong>
+      <pre><code>AB_AccountingApp_ViewAccount
     Prefix: AB
     App: AccountingApp
     Query: Account</code></pre>
-   </td>
+    </td>
   </tr>
 </table>
 
 <table>
   <tr>
-   <th><strong>Table Template: </strong>AB_JOINMN_<strong><em>{Object1}_{Object2}_{}</em></strong>
-   </th>
+    <th>
+      <strong>Table Template: </strong>AB_JOINMN_<strong>
+        <em>{Object1}_{Object2}_{}</em></strong>
+    </th>
   </tr>
   <tr>
-   <td>
-    <strong>Description:</strong>
-    <p>
-    This a field in an AppBuilder Object of the "connect" field type, which references data from another object
-    <br><strong>AB</strong> application name
-    <br><strong>	JOINMN	</strong>keyword
-    <br><strong>	User		</strong>table name
-    <br><strong>	Team		</strong>linked table name
-    <br><strong>	Team		</strong>column name
-   </td>
+    <td>
+      <strong>Description:</strong>
+      <p>
+        This a field in an AppBuilder Object of the "connect" field type, which
+        references data from another object
+        <br /><strong>AB</strong> application name <br /><strong>
+          JOINMN </strong>keyword <br /><strong> User </strong>table name <br /><strong>
+          Team </strong>linked table name <br /><strong> Team </strong>column name
+      </p>
+    </td>
   </tr>
   <tr>
-   <td>
-    <strong>Code reference:</strong>
-    <p>
-    <code>??</code>
-    <p>
-    <code> api/classes/platform/dataFields/ABFieldConnect.js </code>
-   </td>
+    <td>
+      <strong>Code reference:</strong>
+      <p>
+        <code>??</code>
+      </p>
+
+      <p>
+        <code> api/classes/platform/dataFields/ABFieldConnect.js </code>
+      </p>
+    </td>
+
   </tr>
   <tr>
-   <td><strong>Fields:</strong>
-   </td>
+    <td><strong>Fields:</strong></td>
   </tr>
   <tr>
-   <td><strong>Example:</strong>
-   </td>
+    <td><strong>Example:</strong></td>
   </tr>
 </table>

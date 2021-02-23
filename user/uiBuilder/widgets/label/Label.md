@@ -1,4 +1,7 @@
-[< Widgets](../Widgets.md)
+---
+category: widgets
+title: Label
+---
 
 # Label
 

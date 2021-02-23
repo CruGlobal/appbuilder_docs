@@ -2,17 +2,15 @@
 category: develop
 title: Development Environment Setup
 ---
-
-# Development Environment Setup
-
 {% include notification.html status="is-info is-light" message="
 node.js and Docker run in very “Unix” flavored environments. All three major platforms (Windows, Mac, and Linux) can be used for both development and production environments. For Windows, it’s highly advisable to use the Windows Subsystem for Linux 2 feature to enable the Unix flavoring.
 "%}
+
 {% include notification.html status="is-light" message="
 These instructions have been tested with Elementary OS 5.04, Ubuntu 20.04, and Mac OS X 10.14.6.
 "%}
 
-{% include notification.html status="is-danger is-light" message="
+{% include notification.html status="is-warning is-light" message="
 Avoid using `sudo` and `root` whenever possible
 "%}
 ## Installing Docker

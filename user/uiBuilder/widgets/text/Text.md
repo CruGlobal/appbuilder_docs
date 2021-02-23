@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Text
+---
+category: widgets
+title: Text
+---
 
 Use a rich text editor to create a template. Data will displayed according to the template on the live page.
 

@@ -1,8 +1,8 @@
-<!-- ---
+---
 title: Report Manager
 category: Widget
 description: An interactive widget for creating and viewing reports.
---- -->
+---
 
 [< Widgets](../Widgets.md)
 

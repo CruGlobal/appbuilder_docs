@@ -1,7 +1,7 @@
-[< User Instructions](../../Index.md)
-
-# AppBuilder Filters
-
+---
+category: user
+title: AppBuilder Filters
+---
 Filters can be used in many places within AppBuider to narrow down a set of records. A filter rule looks like this:
 ![](./images/filters.png)
 

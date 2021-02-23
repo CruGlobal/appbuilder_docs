@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Data View
+---
+category: widgets
+title: Data View
+---
 
 This widget displays a card for each record of the given data collection.
 

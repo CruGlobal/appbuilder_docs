@@ -1,8 +1,9 @@
-[< User Instructions](../../Index.md)
-
-# System Task: Insert Record
-
-_This is a task that can be added to a process to insert a record using relevant data from the process._
+---
+title: System Task&#58; Insert Record
+description: dynamically create records from a process
+category: process
+---
+This is a task that can be added to a process to insert a record using relevant data from the process.
 
 ## Add the task
 
@@ -50,3 +51,8 @@ This allows a formula to be used to set the value. Both number and text formulas
 - `previousData.Number + 50`
 - `` new String(`Hello ${startData["First Name"]} !`) ``
 - `` new String(`Team: ${startData.Team__relation.Name}`) ``
+
+## Multiple Instances
+This task can be repeated multiple times using the bpmn multiple instance marker ({% include icon.html i='fa-bars' %}).
+
+Add the marker from the wrench ({% include icon.html i='fa-wrench' %}) menu on the task. After adding the marker a **repeat** option is available in the task properties. A connected record field (from the process object) can be selected. This will cause the task to repeat for each connected record attached to the process object. The connected record values are available to set the inserted values, using the 'Instance Data'.

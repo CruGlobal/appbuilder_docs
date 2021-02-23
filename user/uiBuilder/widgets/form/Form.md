@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Form
+---
+category: widgets
+title: Form
+---
 
 Displays a form that user can use to edit or add records. After selecting a data collection. A widget for each field is added to the workspace. Each field has its own properties. [Label widgets](../label/Label.md) can also be added to customize the form.
 

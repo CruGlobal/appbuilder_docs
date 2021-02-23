@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# List
+---
+category: widgets
+title: List
+---
 
 This widget displays a list. A chosen field is listed for each record in a data collection.
 

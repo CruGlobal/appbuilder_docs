@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Pivot
+---
+category: widgets
+title: Pivot
+---
 
 Displays a pivot table to summarize data. [Learn more about pivot tables](https://www.holistics.io/blog/what-is-a-pivot-table/).
 

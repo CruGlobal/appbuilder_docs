@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# CSV Importer
+---
+category: widgets
+title: CSV Importer
+---
 
 This widget will display a button that opens a CSV Import tool. In the CSV import tool allows users to select a CSV file to upload the rows and save them as records of the configured object. The users can configure how each column of the csv maps to the fields of the object.
 

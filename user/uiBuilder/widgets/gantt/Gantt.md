@@ -1,12 +1,8 @@
-<!-- ---
+---
 title: Gantt
 category: Widget
 description: Displays tasks in a timeline view for scheduling and project management.
---- -->
-
-[< Widgets](../Widgets.md)
-
-# Gantt
+---
 
 Displays tasks in a timeline view, which is useful for scheduling and project management.
 

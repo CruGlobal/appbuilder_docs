@@ -1,6 +1,7 @@
-[< Widgets](../Widgets.md)
-
-# Tab
+---
+category: widgets
+title: Tab
+---
 
 The tab widgets display a set of tabs. Each tab can contain it's own set of widgets.
 

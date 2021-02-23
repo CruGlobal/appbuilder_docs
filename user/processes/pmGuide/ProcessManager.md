@@ -1,7 +1,7 @@
-[< User Instructions](../../Index.md)
-
-# Process Manager Guide
-
+---
+title: Process Manager Guide
+category: process
+---
 ## BPMN Basics
 
 The Process Manager uses bpmn notation format. The main elements are represented using these shapes:

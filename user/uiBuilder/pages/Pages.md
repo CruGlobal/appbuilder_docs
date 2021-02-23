@@ -1,6 +1,7 @@
-[< User Instructions](../../Index.md)
-
-# Pages
+---
+title: Pages
+category: ui
+---
 
 Pages are the main building block of the user interface. Keeping a logical page structure makes additions and changes to the UI simple. Pages contain widgets, learn about [widgets](../widgets/Widgets.md).
 
@@ -68,4 +69,3 @@ This is being used for Expense reports. A user can have many Expense Reports(tri
 This structure means a user has to open "Trip to Conference" before editing the "Room."
 
 ![alt_text](pagestructureexample1.png "image_tooltip")
-

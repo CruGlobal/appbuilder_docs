@@ -1,11 +1,8 @@
 ---
-category: Widget
+category: widgets
+title: Chart
+description: Visualize data
 ---
-
-[< Widgets](../Widgets.md)
-
-# Chart
-
 The Chart widget allows data to displayed in a graph.
 
 The Chart widget itself is a container that has properties to load data. An additional widget must be added to it to display the data in the desired chart type. Multiple Charts can be added to one Chart widget, but they will share the same data.
