@@ -5,5 +5,5 @@ callouts: landing
 hide_breadcrumbs: true
 hero_height: is-medium
 layout: default
-hide_footer: true
+no_content: true
 ---

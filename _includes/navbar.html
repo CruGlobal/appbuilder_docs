@@ -23,7 +23,7 @@
     </li>
     {% if reverse %}
       {% for category in reverse %}
-        <li><a href="{{ category.url }}"><div class="has-text-white"">
+        <li><a href="{{ category.url }}"><div class="has-text-white">
           {% if category.icon %}
             <span class="icon is-small">
               <i class="fas {{ category.icon }}" aria-hidden="true"></i>
@@ -34,14 +34,14 @@
       {% endfor %}
     {% endif %}
     <li class="is-active">
-      <a href="#" aria-current="page">
+      <a href="#" aria-current="page"><div class="has-text-white">
         {% if include.icon %}
           <span class="icon is-small">
             <i class="fas {{ include.icon }}" aria-hidden="true"></i>
           </span>
         {% endif %}
         <span>{{ include.title }}</span>
-      </a>
+      </div></a>
     </li>
   </ul>
 </nav>

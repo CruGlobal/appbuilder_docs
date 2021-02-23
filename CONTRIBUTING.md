@@ -59,8 +59,8 @@ description: This description will show beside the title on the menu page.
 The YAML front matter is processed by Jekyll and used to display the page on the correct category pages.
 
 **title** - Page title\
-**category** - Which category page should link to this page.
-**description** - (Optional) Adds a description to the Category Page to provide additional context.
+**category** - Which category page should link to this page.\
+**description** - (Optional) Adds a description to the Category Page to provide additional context.\
 **icon** - (Optional) a font awesome icon (starting with fa-). The icon will display in the breadcrumbs header.
 
 ### Content
@@ -71,12 +71,20 @@ Start with heading 2 (`##`) and add one level for each nested heading. Do not sk
 
 1. Jekyll uses Liquid templating. Using {% raw %}`{{`, `}}`, `{%`, or`%}` {% endraw %} in markdown will cause problems. Use
    `{% raw %}{%{% endraw %} raw {% raw %} %} ... {% {% endraw %} endraw {% raw %}%}{% endraw %}` tags to wrap these characters.
-2. You can add notifications:
-
+3. Font awesome icon can be added to any markdown file using this includes:
+  ```liquid
+  {% raw %}{% include icon.html i='fa-wrench' %}{% endraw %}
+  ```
+  {% include icon.html i='fa-wrench' %}
+2. You can add notifications using this includes:
    ```liquid
    {% raw %}{% include notification.html message="This is the message for the notification" %}{% endraw %}
    ```
+  {% include notification.html message="This is the message for the notification" %}
 
-   {% include notification.html message="This is the message for the notification" %}
-
-3.
+## Run Site Locally
+Jekyll requires ruby.
+```bash
+  bundle install
+  bundle exec jekyll serve
+```

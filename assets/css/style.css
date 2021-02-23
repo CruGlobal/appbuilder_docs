@@ -39,3 +39,6 @@ html {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
+.main-content{
+  min-height: calc(100vh - 20rem)
+}

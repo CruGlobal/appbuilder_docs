@@ -18,7 +18,8 @@
         {% include hero.html %}
     {% endunless %}
     {% include callouts.html %}
-    <section class="section">
+    {% unless page.no_content %}
+    <section class="section main-content">
         <div class="container">
             <div class="columns">
                 {% if layout.menubar_toc or page.menubar_toc %}
@@ -46,6 +47,7 @@
             </div>
         </div>
     </section>
+    {% endunless %}
     {% unless page.hide_footer or layout.hide_footer %}
         {% include footer.html %}
     {% endunless %}
