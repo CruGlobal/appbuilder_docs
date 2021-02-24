@@ -14,7 +14,7 @@
 <nav class="breadcrumb has-navbar-fixed-top" aria-label="breadcrumbs">
   <ul>
     <li>
-      <a href="{{ site.url }}"><div class="has-text-white"">
+      <a href="{{ site.baseurl }}"><div class="has-text-white"">
         <span class="icon is-small">
           <i class="fas fa-home" aria-hidden="true"></i>
         </span>
@@ -23,7 +23,7 @@
     </li>
     {% if reverse %}
       {% for category in reverse %}
-        <li><a href="{{ category.url }}"><div class="has-text-white">
+        <li><a href="{{ site.baseurl }}{{ category.url }}"><div class="has-text-white">
           {% if category.icon %}
             <span class="icon is-small">
               <i class="fas {{ category.icon }}" aria-hidden="true"></i>

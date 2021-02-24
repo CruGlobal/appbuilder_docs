@@ -7,7 +7,7 @@
     <p class="menu-label">Categories</p>
     <ul class="menu-list">
       {% for page in categories %}
-	      <li><a href="{{ page.url }}">{{ page.title }}{% if page.description %}<span class= 'has-text-grey'> - {{ page.description }}</span>{% endif %}</a></li>
+	      <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}{% if page.description %}<span class= 'has-text-grey'> - {{ page.description }}</span>{% endif %}</a></li>
       {% endfor %}
     </ul>
   {% endif %}
@@ -15,7 +15,7 @@
     <p class="menu-label">Pages</p>
     <ul class="menu-list">
     {% for page in pages %}
-  	  <li><a href="{{ page.url }}">{{ page.title }}{% if page.description %}<span class= 'has-text-grey'> - {{ page.description }}</span>{% endif %}</a></li>
+  	  <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}{% if page.description %}<span class= 'has-text-grey'> - {{ page.description }}</span>{% endif %}</a></li>
     {% endfor %}
   {% endif %}
   </ul>
