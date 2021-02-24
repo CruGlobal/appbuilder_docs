@@ -3,9 +3,6 @@ title: Contributing
 category: home
 layout: page
 ---
-
-# Contributing to Documentation
-
 Any additions to AppBuilder documentation is welcome. Here are few guidelines to keep our documentation consistent:
 
 1. Follow the [file structure](#file-structure)

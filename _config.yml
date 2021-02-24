@@ -9,3 +9,4 @@ include:
   - CONTRIBUTING.md
 remote_theme: chrisrhymes/bulma-clean-theme
 fixed_navbar: top
+title: AppBuider Docs
