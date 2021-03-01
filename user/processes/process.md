@@ -4,5 +4,5 @@ description: Using Process Manager to build custom Processes.
 category: user
 is-category: process
 layout: index
-icon: fa-code-fork
+icon: fa-code-branch
 ---
