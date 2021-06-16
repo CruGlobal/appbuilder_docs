@@ -9,11 +9,11 @@ To connect an object using a Custom Foreign Key first you need to create a valid
 
 ![](images/custom_index.png)
 
-Only unique index are valid for use in a connected record field. Also the field used in the index needs to be a required field (set this in it's field properties).
+Only unique indexes are valid for use in a connected record field. Also the field used in the index needs to be a required field (set this in it's field properties).
 
 ![](images/required_field.png)
 
-After creating a valid index the option 'use custom foreign key' is available when add a connected record field.
+After creating a valid index the option 'use custom foreign key' is available when adding a connected record field.
 
 ## Which Object's Key is Used
 
