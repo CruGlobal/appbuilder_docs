@@ -23,3 +23,16 @@ After creating a valid index the option 'use custom foreign key' is available wh
 | Many A - One B  |                       | x                      |
 | One A - Many B  | x                     |                        |
 | One A - One B   |                       | x                      |
+
+## Setting up a 'pretty' index
+The plan is to use this key later on as a label. So we want it to be as user friendly as possible. So we'll use a "Combined Field" to make what should be a unique combination of fields. Firstname+Lastname+birthday.
+Once this is created, we can also use it as the label of this object for consistency. 
+Remember that this has to exist before creating the connected fields! Try to have a plan for what forign keys you'll need in your app before building too much of it. 
+
+![](images/custom_index_maker.png)
+
+## Using key as a label in a child object
+Say a child object has no identity apart from a parent object. We can use the same 'Combined Fields' to use that connected field as a label.
+Note in this example, that a non-forign key connected field was used in the Combined field, and it shows the uuid rather than the label.
+
+![](images/using_index_as_label.png)
