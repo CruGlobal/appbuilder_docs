@@ -9,18 +9,38 @@ Adds a button to download a custom report made using a docx template.
 
 We use [docxtemplater](https://docxtemplater.com/) to create the reports.
 
-### Basic Use
+### Single Data Source
 
 Reference a field:\
 `{field name}`
 
-Create a loop:
+Loop through values:
 
 ```
-{#data collection}
+{#field name}
   ...
-{/data collection}
+{/field name}
 ```
+
+### Multiple Data Sources
+
+Pick a data source with looping syntax:
+
+```
+{#data collection 1}
+  {field name 1}
+  {field name 2}
+  {field name 3}
+{/data collection 1}
+
+{#data collection 2}
+  {field name 1}
+  {field name 2}
+  {field name 3}
+{/data collection 2}
+```
+
+### Special Tags
 
 Insert an image:\
 `{% raw  %}{%image field}{% endraw  %}`
