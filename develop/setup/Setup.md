@@ -12,7 +12,7 @@ These instructions have been tested with Elementary OS 5.04, Ubuntu 20.04, and M
 "%} -->
 
 {% include notification.html status="is-warning is-light" message="
-Avoid using `sudo` and `root` whenever possible
+ Avoid using `sudo` and `root` whenever possible [(reasons)](https://dev.to/becodeorg/you-should-never-use-sudo-while-coding-4fa0)
 "%}
 
 ## Installing Docker
@@ -25,6 +25,10 @@ Newer version of Docker Desktop may not work. Recommend using v3.3.
 1. Install docker client for your OS
    - [Linux (Ubuntu-based distributions) use docker’s repository](https://docs.docker.com/engine/install/ubuntu/)
    - [Windows (using WSL2)](https://docs.docker.com/docker-for-windows/wsl/)
+      -   - Install wsl, update wsl to version two, create unix user
+      -   - Make docker account/ install docker
+      -   - VSCode + 'Remote - WSL extension.'
+      -   - Install Windows Terminal, run all future commands in Linux shell 
    - [Mac](https://docs.docker.com/docker-for-mac/install/)
 1. Create a docker swarm:
    ```bash
@@ -85,7 +89,7 @@ The ab-cli tool is the primary tool that creates either a production instance, o
 npm install -g Hiro-Nakamura/ab-cli
 ```
 
-Then, run the installer. Specify your own target directory in place of `{install_dir}`, for example:
+Then, run the installer. Specify your own target directory in place of `{install_dir}`, (note that specifying a pre-existing directory may cause problems) for example:
 
 ```bash
 appbuilder install {install_dir} --develop
