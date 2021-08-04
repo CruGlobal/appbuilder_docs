@@ -21,14 +21,17 @@ These instructions have been tested with Elementary OS 5.04, Ubuntu 20.04, and M
 Newer version of Docker Desktop may not work. Recommend using v3.3.
 "%}
 
-1. Create a docker account at https://www.docker.com/
+1. Create a docker account at [https://www.docker.com/](https://www.docker.com/)
 1. Install docker client for your OS
    - [Linux (Ubuntu-based distributions) use docker’s repository](https://docs.docker.com/engine/install/ubuntu/)
-   - [Windows (using WSL2)](https://docs.docker.com/docker-for-windows/wsl/)
+   - [Windows (using WSL2)](https://docs.docker.com/docker-for-windows/wsl/)  
+    {% comment %}
+    These instructions work from Windows, no need to run within a Linux shell. The other steps are already included above
       -   - Install wsl, update wsl to version two, create unix user
       -   - Make docker account/ install docker
       -   - VSCode + 'Remote - WSL extension.'
-      -   - Install Windows Terminal, run all future commands in Linux shell 
+      -   - Install Windows Terminal, run all future commands in Linux shell
+      {% endcomment %}
    - [Mac](https://docs.docker.com/docker-for-mac/install/)
 1. Create a docker swarm:
    ```bash
@@ -143,8 +146,8 @@ npm run devBuild:win32
 ```bash
 cd {install_dir}
 docker stack deploy -c config-compose.yml {stack_name}
-docker service logs {stack_name}_config
-# Continye when you see 'Configuration complete' in the logs
+docker service logs -f {stack_name}_config
+# Continue when you see 'config preparation complete' in the logs
 ^C
 docker stack rm {stack_name}
 ```
