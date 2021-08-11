@@ -61,7 +61,7 @@ Framework7 is a JavaScript based framework and UI library for mobile apps. We ma
         <div class="page-content">
             {% raw %}{{#if showMessage}}
                 <p>{{message}}</p>
-            {% raw %}{{/if}}{% endraw %}
+            {{/if}}{% endraw %}
         </div>
     </div>
 </template>
