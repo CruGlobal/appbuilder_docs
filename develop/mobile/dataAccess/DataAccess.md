@@ -47,9 +47,15 @@ Like most Cordova apps, `index.html` is the starting point where loading begins.
 
 ## Framework7
 
-Framework7 is a JavaScript based framework and UI library for mobile apps. We make use of its UI widgets as well as its page routing and navigation system. Each of our app's Framework7 pages is a *component* that has its own .html file. The file is made up of two sections: the HTML `<template>` section that builds the look of the page, and the `<script>` section that drives the functionality taking place on it.
+Framework7 is a JavaScript based framework and UI library for mobile apps. We make use of its UI widgets as well as its page routing and navigation system. Each of our app's Framework7 pages is a *component* that has its own .html file. The file is usually made up of two or three sections: the HTML `<template>` section that builds the look of the page, the `<script>` section that drives the functionality taking place on it, and (less commonly) a `<style>` section for any CSS  that is specific to the page.
 
 ```html
+<style>
+    .page .page-content p {
+        font-size: 110%;
+    }
+</style>
+
 <template>
     <div class="page">
         <div class="page-content">
@@ -86,24 +92,28 @@ Framework7 is a JavaScript based framework and UI library for mobile apps. We ma
 </script>
 ```
 
-### No Async
+### Async Data
 
-The Framework7 component `<template>` populates the page's data from the `data()` function in the `<script>` section. However, this function must return its value synchronously, async operations will not work for this. So we need to make sure all the AppBuilder data is ready before the Framework7 page even starts to load.  We achieve this by preventing the user from viewing the page until the data is ready. In the page's `on.pageAfterIn()` function, we check the state of the ABApplication to see if the data is ready or not. If not, we reroute to a different page until the data has fully downloaded.
+The Framework7 component `<template>` populates the page's data from the `data()` function in the `<script>` section. Originally, this function could only return its value synchronously, and you may see some older applications designed around this limitation. For example, all the AppBuilder data had to be ready before the Framework7 page even started to load and the user was prevented from viewing the page until the data was ready. In more recent versions of Framework7, the `data()` function can now also return a Promise that resolves with the data. Both async and sync are supported.
 ```javascript
-pageAfterIn: function() {
-
-    var events = this.$root.getMobileApp('EVENTS');
-    if (events.status != 'ready') {
-        this.$router.navigate('/events/initializing');
-        return;
-    }
-
+data: function() {
+    var data = {
+        label: "Image caption",
+        imageURL: null
+    };
+    return new Promise((resolve) => {
+        camera.loadPhotoByName("somePhotoName")
+            .then((photo) => {
+                data.imageURL = photo.url;
+                resolve(data);
+            })
+    });
 },
 ```
 
 ### No Imports
 
-Another limitation of Framework7 component scripts is they cannot import external libraries on their own. Still, they do have access to anything that is global, and a bunch of useful stuff is also available through the `this` object. You may be wondering about `this.$root`. This refers to data that was passed in when initializing Framework7. Somewhere in the `appPage.js` contructor, you will find something a bit like this, where the `data` parameter is passed in:
+A limitation of Framework7 component scripts is they cannot import external libraries on their own. Still, they do have access to anything that is global, and a bunch of useful stuff is also available through the `this` object. You may be wondering about `this.$root`. This refers to data that was passed in when initializing Framework7. Somewhere in the `appPage.js` contructor, you will find something a bit like this, where the `data` parameter is passed in:
 
 ```javascript
 this.applications = ABApplications;
