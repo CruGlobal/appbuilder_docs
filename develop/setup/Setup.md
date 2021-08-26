@@ -15,7 +15,9 @@ These instructions have been tested with Elementary OS 5.04, Ubuntu 20.04, and M
  Avoid using `sudo` and `root` whenever possible [(reasons)](https://dev.to/becodeorg/you-should-never-use-sudo-while-coding-4fa0)
 "%}
 
-## Installing Docker
+## Preparation
+
+### Installing Docker
 
 {% include notification.html status="is-warning is-light" message="
 Newer version of Docker Desktop may not work. Recommend using v3.3.
@@ -25,13 +27,13 @@ Newer version of Docker Desktop may not work. Recommend using v3.3.
 1. Install docker client for your OS
    - [Linux (Ubuntu-based distributions) use docker’s repository](https://docs.docker.com/engine/install/ubuntu/)
    - [Windows (using WSL2)](https://docs.docker.com/docker-for-windows/wsl/)  
-    {% comment %}
-    These instructions work from Windows, no need to run within a Linux shell. The other steps are already included above
-      -   - Install wsl, update wsl to version two, create unix user
-      -   - Make docker account/ install docker
-      -   - VSCode + 'Remote - WSL extension.'
-      -   - Install Windows Terminal, run all future commands in Linux shell
-      {% endcomment %}
+     {% comment %}
+     These instructions work from Windows, no need to run within a Linux shell. The other steps are already included above
+     - - Install wsl, update wsl to version two, create unix user
+     - - Make docker account/ install docker
+     - - VSCode + 'Remote - WSL extension.'
+     - - Install Windows Terminal, run all future commands in Linux shell
+         {% endcomment %}
    - [Mac](https://docs.docker.com/docker-for-mac/install/)
 1. Create a docker swarm:
    ```bash
@@ -54,15 +56,15 @@ docker image pull
 docker system prune
 ```
 
-## Installing node.js and NPM
+### Installing node.js and NPM
 
 {% include notification.html status="is-info is-light" message="
-Tested on node version 14
+Tested on node version 14.0.0, 16.2.0
 "%}
 
 It is recommended to use a node version manager to install node.js & npm. Two well- known version managers are [nvm](https://github.com/nvm-sh/nvm#node-version-manager---) and [n](https://github.com/tj/n#n--interactively-manage-your-nodejs-versions). These managers allow you to install multiple versions of node/npm, to switch between them easily, and to avoid “global installs” (which would necessitate sudo/root access).
 
-### Linux, Mac:
+#### Linux, Mac:
 
 First, run the nvm install script from the link above (curl or wget). Afterward, you may have to configure your current shell environment:
 
@@ -80,11 +82,11 @@ Alternatives (nodesource) to using a node version manager:
 
 [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-### Windows:
+#### Windows:
 
 See [nvm-windows](https://github.com/coreybutler/nvm-windows)
 
-## Install the AppBuilder Installer (ab-cli)
+## Install the AppBuilder
 
 The ab-cli tool is the primary tool that creates either a production instance, or a developer install of the AppBuilder. Install the installer using the following command:
 
@@ -109,7 +111,7 @@ This installer will ask the following prompts.
 
 ```plaintext
 ? What Docker Stack reference do you want this install to use: ab
-? What port do you want AppBuilder to listen on (80): 80
+? What port do you want AppBuilder to listen on (80): 8080
 ? Do you want to expose the DB : Yes
 ? What port do you want the DB to listen on: 3306
 ? Which Docker Tags to use [master, develop]: develop
@@ -124,33 +126,38 @@ This installer will ask the following prompts.
 ? Enter the Tenant Administrator email: admin@email.com
 ```
 
-## Windows Fixes
+{% include notification.html status="is-warning is-light" message="
+Don't use ports 8088 and 8889 as these are used for the test stack.
+"%}
+
+### Windows Fixes
 
 Currently the installer script on windows fails to install npm dependencies so the following steps are needed:
 
 1. Install npm dependencies on the top level
-```bash
-cd {install_dir}
-npm install
-```
+   ```bash
+   cd {install_dir}
+   npm install
+   ```
 1. Install npm dependencies in `developer/ab_platform_web`
-```bash
-cd developer/ab_platform_web
-npm install
-```
+   ```bash
+   cd developer/ab_platform_web
+   npm install
+   ```
 1. Install npm dependencies for each other repository in `developer`. These need to be installed inside the docker containers so the use the command:
-```bash
-npm run devBuild:win32
-```
+   ```bash
+   npm run devBuild:win32
+   ```
 1. Run the configuration stack. Make sure to use the same stack name that was set when installing.
-```bash
-cd {install_dir}
-docker stack deploy -c config-compose.yml {stack_name}
-docker service logs -f {stack_name}_config
-# Continue when you see 'config preparation complete' in the logs
-^C
-docker stack rm {stack_name}
-```
+   ```bash
+   cd {install_dir}
+   docker stack deploy -c config-compose.yml {stack_name}
+   docker service logs -f {stack_name}_config
+   # Continue when you see 'config preparation complete' in the logs
+   ^C
+   docker stack rm {stack_name}
+   ```
+1. Repeat step 4 with the stack name `test_{stack_name}` to properly configure the test stack as well.
 
 ## Starting AppBuilder
 
@@ -169,7 +176,7 @@ cd {install_dir}
 ```
 
 When you see the following screen, it means that the AppBuilder stack has successfully loaded.
-![](images/appbuilderUp.png)
+![](images/appbuilderUp.png)\
 In a browser open:
 
 [`http://127.0.0.1:{port_number}`](http://127.0.0.1)

@@ -1,6 +1,6 @@
 ---
 title: End-to-End Testing Guide
-category: develop
+category: test
 ---
 ## Testing Philosophy & Goals
 
