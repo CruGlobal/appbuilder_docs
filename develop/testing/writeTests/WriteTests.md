@@ -12,8 +12,6 @@ Here is a basic template for our tests:
 ```js
 const Common = require("../../../setup/common.js");
 
-var isAppImported = false;
-
 describe("Test Group Name", () => {
    before(() => {
       // make sure we have a clean slate before continuing.
