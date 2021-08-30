@@ -3,6 +3,7 @@ title: System Task&#58; Insert Record
 description: dynamically create records from a process
 category: process
 ---
+
 This is a task that can be added to a process to insert a record using relevant data from the process.
 
 ## Add the task
@@ -40,19 +41,25 @@ This is similar to using the root data, but instead looks to values in a previou
 
 This allows a formula to be used to set the value. Both number and text formulas are supported. This requires a specific syntax:
 
-- `startData` - this is to access the record that triggered the process
-- `previousData` - this is used to access the record in the previous step
-- use `.column` or `["Long Name"]` format to access the fields in the records (note: use column name not label)
+- `[startData.FIELDNAME]` - this is to access the record that triggered the process
+- `[previousData.FIELDNAME]` - this is used to access the record in the previous step
+- `[QUERY_TASK_NAME.PARAMETER_NAME]` - this access a parameter saved from a previous query task. QUERY_TASK_NAME represents the name entered in the query task's properties and PARAMETER_NAME is what was used to save the plucked data within the query.
 - `__relation.` can be used after a connected record field to access fields of the connected record
 - For Strings use a `new String()` constructor with a [template string](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings)
 
 **Examples**
 
-- `previousData.Number + 50`
-- `` new String(`Hello ${startData["First Name"]} !`) ``
-- `` new String(`Team: ${startData.Team__relation.Name}`) ``
+- `[previousData.Number] + 50`
+- `` new String(`Team: ${[startData.Team__relation.Name]}`) ``
+
+#### Set by the parameter of a Query Task.
+
+This allows you to use data saved from a Query Task. You will see a list of available parameters. Multiple values can be selected, but the first one with a value will be used. This is intended for when a process has multiple paths it could follow to get to the insert task.
+
+![](images/queryParamater.png)
 
 ## Multiple Instances
+
 This task can be repeated multiple times using the bpmn multiple instance marker ({% include icon.html i='fa-bars' %}).
 
 Add the marker from the wrench ({% include icon.html i='fa-wrench' %}) menu on the task. After adding the marker a **repeat** option is available in the task properties. A connected record field (from the process object) can be selected. This will cause the task to repeat for each connected record attached to the process object. The connected record values are available to set the inserted values, using the 'Instance Data'.
