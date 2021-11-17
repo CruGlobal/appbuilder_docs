@@ -16,7 +16,7 @@ GitHub allows a number of triggers to be set. These will probably be best in mos
 ```yml
 on:
   # Run on any commit to the #master branch
-  commit:
+  push:
     branches: [master]
   # Run on pull requests into the #master branch
   pull_request:
