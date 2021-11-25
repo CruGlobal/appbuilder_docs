@@ -91,7 +91,7 @@ See [nvm-windows](https://github.com/coreybutler/nvm-windows)
 The ab-cli tool is the primary tool that creates either a production instance, or a developer install of the AppBuilder. Install the installer using the following command:
 
 ```bash
-npm install -g Hiro-Nakamura/ab-cli
+npm install -g digi-serve/ab-cli
 ```
 
 Then, run the installer. Specify your own target directory in place of `{install_dir}`, (note that specifying a pre-existing directory may cause problems) for example:
@@ -129,35 +129,6 @@ This installer will ask the following prompts.
 {% include notification.html status="is-warning is-light" message="
 Don't use ports 8088 and 8889 as these are used for the test stack.
 "%}
-
-### Windows Fixes
-
-Currently the installer script on windows fails to install npm dependencies so the following steps are needed:
-
-1. Install npm dependencies on the top level
-   ```bash
-   cd {install_dir}
-   npm install
-   ```
-1. Install npm dependencies in `developer/ab_platform_web`
-   ```bash
-   cd developer/ab_platform_web
-   npm install
-   ```
-1. Install npm dependencies for each other repository in `developer`. These need to be installed inside the docker containers so the use the command:
-   ```bash
-   npm run devBuild:win32
-   ```
-1. Run the configuration stack. Make sure to use the same stack name that was set when installing.
-   ```bash
-   cd {install_dir}
-   docker stack deploy -c config-compose.yml {stack_name}
-   docker service logs -f {stack_name}_config
-   # Continue when you see 'config preparation complete' in the logs
-   ^C
-   docker stack rm {stack_name}
-   ```
-1. Repeat step 4 with the stack name `test_{stack_name}` to properly configure the test stack as well.
 
 ## Starting AppBuilder
 
