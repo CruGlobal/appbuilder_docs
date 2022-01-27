@@ -176,3 +176,16 @@ Convenient helper - shut down all AppBuilder Docker services: `{install_dir}/Dow
 Convenient helper - restart a single AppBuilder Docker service: `{install_dir}/restart.sh {docker_service_name}`
 
 Convenient helper - enter a docker shell session: `{install_dir}/cli.sh`
+
+## Windows notes:
+
+Sometimes .sh files will fail this may be because the line ending was set to CRLF
+To check this, look at the bottom right hand corner of your IDE when suspect .sh file is open
+
+If this fails,
+https://github.com/microsoft/WSL/issues/5923
+"An error occurred mounting one of your file systems. Please run 'dmesg' for more details."
+WSL may be set to wrong default. Try running 'bash' or 'wsl'
+If they fail:
+"wsl -l to discover this and wsl -d <myDistro>to explicitly select the distro "
+"the command to set the default is wsl -s <myDistro>."
