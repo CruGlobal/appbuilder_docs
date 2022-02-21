@@ -189,3 +189,29 @@ WSL may be set to wrong default. Try running 'bash' or 'wsl'
 If they fail:
 "wsl -l to discover this and wsl -d <myDistro>to explicitly select the distro "
 "the command to set the default is wsl -s <myDistro>."
+
+# Additional Steps for testing
+
+## Install:
+
+Get a [git version manager ](https://www.sourcetreeapp.com/)
+
+Use git version manager to [clone](https://confluence.atlassian.com/get-started-with-sourcetree/clone-a-remote-repository-847359098.html) the module-repo you want to make tests for (ex: ns_app)
+
+## Use:
+
+Open your AB install folder in your IDE
+
+Open command line (one inside VScode works great)
+
+If appbuilder is fully installed these will start the **test server** and **the test-chrome-window**
+
+$`npm run test:boot`
+
+$`npm run cypress:open`
+
+Clicking one of these will run that test, all the top level tests are a good way to make sure your local envirment is working
+
+![alt_text](images/cylist.png "image_tooltip")
+
+You can open localhost:8088 or 127.0.0.1:8088 in your browser. (useful for getting data-cy ids)
