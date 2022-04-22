@@ -156,6 +156,9 @@ In a browser open:
 
 If using `--develop flag`, the various code repositories will be located at: `{install_dir}/developer/`
 
+If using VS code, this is currently the extension that works best for prettier
+https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
+
 To monitor and publish code changes automatically:
 
 ```bash
