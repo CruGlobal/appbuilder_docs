@@ -77,3 +77,14 @@ See [docxtemplater](https://docxtemplater.com/) for examples and advanced use.
 **Page background** - Change the widget background color.
 
 **Button Position** - Choose to position the button left, center, or right.
+
+## Example usage:
+Here is an example of the most complicated docx report at time of writing.
+It is not recommended that you build something similar, it is much better to use data collections here: 
+![](files/widget.png)
+
+[Report:](files/#1การประยุกต์ใช้เบื้องต้นของบ้านสารรักไทย.docx)
+
+This is the query the report is based on:
+
+![](files/query.png)
