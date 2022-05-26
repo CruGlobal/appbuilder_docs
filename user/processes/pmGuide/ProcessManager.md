@@ -47,6 +47,15 @@ Three main classes of tasks can be added to a process. Depending on the choice d
 
 Used to Send an Email
 
+To work on message field using process variables (Query Task Save and Get Reset Password Url).
+   - Query Task Save: `{% raw %}{%= TASK_NAME.SAVE_NAME %}{% endraw %}`
+   - Get Reset Password Url Task: `{% raw %}{%= TASK_NAME.url %}{% endraw %}`
+
+   Example:
+      ![](images/send_task.png)
+
+
+
 ### Service Task
 
 #### Query Task
