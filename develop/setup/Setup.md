@@ -36,6 +36,7 @@ Newer version of Docker Desktop may not work. Recommend using v3.3.
          {% endcomment %}
    - [Mac](https://docs.docker.com/docker-for-mac/install/)
 1. Create a docker swarm:
+{% include codeHeader.html %}
    ```bash
    docker swarm init --advertise-addr {my.ip.addr.ess}
    ```
@@ -68,12 +69,13 @@ It is recommended to use a node version manager to install node.js & npm. Two we
 
 First, run the nvm install script from the link above (curl or wget). Afterward, you may have to configure your current shell environment:
 
+{% include codeHeader.html %}
 ```bash
 bash source ~/.bashrc
 ```
 
 Execute the following command, to install both node and npm:
-
+{% include codeHeader.html %}
 ```bash
 nvm install node
 ```
@@ -89,13 +91,13 @@ See [nvm-windows](https://github.com/coreybutler/nvm-windows)
 ## Install the AppBuilder
 
 The ab-cli tool is the primary tool that creates either a production instance, or a developer install of the AppBuilder. Install the installer using the following command:
-
+{% include codeHeader.html %}
 ```bash
 npm install -g digi-serve/ab-cli
 ```
 
 Then, run the installer. Specify your own target directory in place of `{install_dir}`, (note that specifying a pre-existing directory may cause problems) for example:
-
+{% include codeHeader.html %}
 ```bash
 appbuilder install {install_dir} --develop
 ```
@@ -133,14 +135,14 @@ Don't use ports 8088 and 8889 as these are used for the test stack.
 ## Starting AppBuilder
 
 Start webpack:
-
+{% include codeHeader.html %}
 ```bash
 cd {install_dir}/developer/ab_platform_web
 npm run watch
 ```
 
 In a second terminal run UP.sh
-
+{% include codeHeader.html %}
 ```bash
 cd {install_dir}
 ./UP.sh
@@ -160,7 +162,7 @@ If using VS code, this is currently the extension that works best for prettier
 https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
 
 To monitor and publish code changes automatically:
-
+{% include codeHeader.html %}
 ```bash
 cd {install_dir}/developer/app_builder
 npm run watch
