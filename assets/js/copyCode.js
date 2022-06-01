@@ -1,3 +1,6 @@
+---
+permalink: /assets/js/copyCode.js
+---
 // This assumes that you're using Rouge; if not, update the selector
 const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
 const copyCodeButtons = document.querySelectorAll('.copy-code-button');
