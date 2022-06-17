@@ -220,3 +220,16 @@ Clicking one of these will run that test, all the top level tests are a good way
 ![alt_text](images/cylist.png "image_tooltip")
 
 You can open localhost:8088 or 127.0.0.1:8088 in your browser. (useful for getting data-cy ids)
+
+### Useful commands: 
+When sql doesn't setup properly
+
+{% include codeHeader.html %}
+```docker stack rm <stackName>
+docker volume rm $(docker volume ls -q | grep "<stackName>_mysql")
+./configReset.sh
+```
+{% include codeHeader.html %}
+```docker stack deploy -c dbinit-compose.yml <stackName>
+docker stack rm <stackName>
+```
