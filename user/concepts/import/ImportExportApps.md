@@ -30,6 +30,15 @@ Importing works the same regardless of the export method. Click Import from the 
 
 ![](images/import.png)
 
+## Before you import:
+
+1. Message the other builders: have they made changes on the `Destination Server`?
+ - If they have, their work could be overwritten by your import. 
+ - If you are importing definitions which *removed* objects of columns, that may break existing data.
+
+2. Export all the old definitions from `Destination Server` and back them up temporarily in a local directory.
+ - I recommend this step even if you know the backups are working, it is much easier to re-import than to restore the database
+
 ## Cautions
 
 - Because Objects can be shared between multiple apps, importing a single app can still impact other apps.
