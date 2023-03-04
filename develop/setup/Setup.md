@@ -225,13 +225,13 @@ You can open localhost:8088 or 127.0.0.1:8088 in your browser. (useful for getti
 When sql doesn't setup properly
 
 {% include codeHeader.html %}
-```
+```bash
 docker stack rm <stackName>
 docker volume rm $(docker volume ls -q | grep "<stackName>_mysql")
 ./configReset.sh
 ```
 {% include codeHeader.html %}
-```
+```bash
 docker stack deploy -c dbinit-compose.yml <stackName>
 docker stack rm <stackName>
 ```
