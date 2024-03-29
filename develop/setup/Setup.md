@@ -19,10 +19,6 @@ These instructions have been tested with Elementary OS 5.04, Ubuntu 20.04, and M
 
 ### Installing Docker
 
-{% include notification.html status="is-warning is-light" message="
-Newer version of Docker Desktop may not work. Recommend using v3.3.
-"%}
-
 1. Create a docker account at [https://www.docker.com/](https://www.docker.com/)
 1. Install docker client for your OS
    - [Linux (Ubuntu-based distributions) use docker’s repository](https://docs.docker.com/engine/install/ubuntu/)
@@ -41,27 +37,7 @@ Newer version of Docker Desktop may not work. Recommend using v3.3.
    docker swarm init --advertise-addr {my.ip.addr.ess}
    ```
 
-**NOTE:** Some useful docker commands:
-
-```bash
-docker stack deploy -C {file} {stack}
-docker stack remove {stack}
-docker ps
-docker stats
-docker stack ls
-docker container ls
-docker network ls
-docker volume ls
-docker images
-docker image pull
-docker system prune
-```
-
 ### Installing node.js and NPM
-
-{% include notification.html status="is-info is-light" message="
-Tested on node version 14.0.0, 16.2.0
-"%}
 
 It is recommended to use a node version manager to install node.js & npm. Two well- known version managers are [nvm](https://github.com/nvm-sh/nvm#node-version-manager---) and [n](https://github.com/tj/n#n--interactively-manage-your-nodejs-versions). These managers allow you to install multiple versions of node/npm, to switch between them easily, and to avoid “global installs” (which would necessitate sudo/root access).
 
@@ -90,13 +66,13 @@ See [nvm-windows](https://github.com/coreybutler/nvm-windows)
 
 ## Install the AppBuilder
 
-The ab-cli tool is the primary tool that creates either a production instance, or a developer install of the AppBuilder. Install the installer using the following command:
+Install our [ab-cli](https://github.com/digi-serve/ab-cli) tool. One of it's functions is to install the AppBuilder, optionally with the developemnet environment. Use the following command:
 {% include codeHeader.html %}
 ```bash
 npm install -g digi-serve/ab-cli
 ```
 
-Then, run the installer. Specify your own target directory in place of `{install_dir}`, (note that specifying a pre-existing directory may cause problems) for example:
+Then, run the installer. Specify your own target directory in place of `{install_dir}`, for example:
 {% include codeHeader.html %}
 ```bash
 appbuilder install {install_dir} --develop
@@ -105,7 +81,6 @@ appbuilder install {install_dir} --develop
 **Option Definitions**
 
 - `--develop`: executes git clone commands to bring down the source code
-- `--V1`: use this flag to install AppBuilder version 1
 
 **Recommended Settings**
 
@@ -116,16 +91,15 @@ This installer will ask the following prompts.
 ? What port do you want AppBuilder to listen on (80): 8080
 ? Do you want to expose the DB : Yes
 ? What port do you want the DB to listen on: 3306
-? Which Docker Tags to use [master, develop]: develop
-? Use nginx as a proxy server? Yes
-? What kind of SSL encryption do you want: none
 ? Enter the password for the DB Root User? root
-? Do you want to encrypt the DB tables on disk? No
-? Do you want to connect to a Slack channel for updates? No
-? Do you want to enable SMTP Email Notifications? : No
+? Which Docker Tags to use [master, develop, latest]: latest
+? Authentication type: login
+? Enter the URL for the auth service redirect: http://localhost:8080
+? Do you want to enable the RELAY service : No
 ? Enter the Tenant Administrator Username: admin
 ? Enter the Tenant Administrator password: admin
 ? Enter the Tenant Administrator email: admin@email.com
+? Enter the Tenant Administrator URL: http://localhost:8080/
 ```
 
 {% include notification.html status="is-warning is-light" message="
@@ -134,18 +108,11 @@ Don't use ports 8088 and 8889 as these are used for the test stack.
 
 ## Starting AppBuilder
 
-Start webpack:
-{% include codeHeader.html %}
-```bash
-cd {install_dir}/developer/ab_platform_web
-npm run watch
-```
-
-In a second terminal run UP.sh
+Run UP.sh
 {% include codeHeader.html %}
 ```bash
 cd {install_dir}
-./UP.sh
+./UP.sh -d
 ```
 
 When you see the following screen, it means that the AppBuilder stack has successfully loaded.
@@ -158,17 +125,12 @@ In a browser open:
 
 If using `--develop flag`, the various code repositories will be located at: `{install_dir}/developer/`
 
-If using VS code, this is currently the extension that works best for prettier
-https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
-
-To monitor and publish code changes automatically:
-{% include codeHeader.html %}
-```bash
-cd {install_dir}/developer/app_builder
-npm run watch
-```
+Frontend code is found in `/developer/ab_platform_web` and `/developer/plugins/ABDesigner`. 
+These repositories use webpack and compile to `/developer/web/assets`. 
+To see changes to the code live use `npm run watch` in each repository.
 
 ## Files That You Should Know About
+Config file: `{install_dir}/.env` - This will be generated based on your answers during the install
 
 Docker production environment configuration file: `{install_dir}/docker-compose.yml`
 
@@ -195,43 +157,45 @@ If they fail:
 "wsl -l to discover this and wsl -d <myDistro>to explicitly select the distro "
 "the command to set the default is wsl -s <myDistro>."
 
-# Additional Steps for testing
+# E2E Testing
 
-## Install:
+The following explains how to work with our E2E tests.
 
-Get a [git version manager ](https://www.sourcetreeapp.com/)
-
-Use git version manager to [clone](https://confluence.atlassian.com/get-started-with-sourcetree/clone-a-remote-repository-847359098.html) the module-repo you want to make tests for (ex: ns_app)
-
-## Use:
-
-Open your AB install folder in your IDE
-
-Open command line (one inside VScode works great)
-
-If appbuilder is fully installed these will start the **test server** and **the test-chrome-window**
-
-$`npm run test:boot`
-
-$`npm run cypress:open`
-
-Clicking one of these will run that test, all the top level tests are a good way to make sure your local envirment is working
-
-![alt_text](images/cylist.png "image_tooltip")
-
-You can open localhost:8088 or 127.0.0.1:8088 in your browser. (useful for getting data-cy ids)
-
-### Useful commands: 
-When sql doesn't setup properly
+## Install Tests:
+Use the ab-cli tool to install tests. From your install directory run:
 
 {% include codeHeader.html %}
 ```bash
-docker stack rm <stackName>
-docker volume rm $(docker volume ls -q | grep "<stackName>_mysql")
-./configReset.sh
+appbuilder test add
 ```
+
+Use space to select which tests to install, then Enter.
+
+## Run Tests:
+There are two main options for running the tests
+
+1) Run the test in a test stack:
+
 {% include codeHeader.html %}
 ```bash
-docker stack deploy -c dbinit-compose.yml <stackName>
-docker stack rm <stackName>
+npm run test:boot
 ```
+Since the test will reset the database, this is recommeneded if you keep test data in the main stack.
+
+2) Run the test in the main stack
+{% include codeHeader.html %}
+```bash
+`./UP.sh -dt`
+```
+
+To acually run the test launch cypress with the command:
+```bash
+npm run cypress:open
+```
+Follow the on screen prompts to start and E2E test file.
+
+Test can also be run headless as well with `npm run test:e2e`
+
+
+Note: If you have any trouble, you may need to update the environment variable in `.env`. Look for the `CYPRESS_*` variables.  
+
