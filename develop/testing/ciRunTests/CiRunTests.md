@@ -3,6 +3,8 @@ title: Continuous Integration E2E Test Runs
 category: test
 ---
 
+{% include notification.html message="Out of date. See [ab-install-action](https://github.com/digi-serve/ab-install-action)" %}
+
 GitHub Actions can be used to automatically run Cypress end to end tests. As an overview we need to:
 
 1. Build a Production version of AppBuilder
