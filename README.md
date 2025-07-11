@@ -134,7 +134,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
     on:
       push:
         branches:
-          - "main"
+          - "master"
         paths:
           - "docs/**"
     ```

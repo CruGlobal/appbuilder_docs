@@ -93,7 +93,7 @@ This installer will ask the following prompts.
 ? Do you want to expose the DB : Yes
 ? What port do you want the DB to listen on: 3306
 ? Enter the password for the DB Root User? root
-? Which Docker Tags to use [main, develop, latest]: latest
+? Which Docker Tags to use [master, develop, latest]: latest
 ? Authentication type: login
 ? Enter the URL for the auth service redirect: http://localhost:8080
 ? Do you want to enable the RELAY service : No
