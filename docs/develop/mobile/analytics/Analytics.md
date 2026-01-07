@@ -1,8 +1,8 @@
 ---
-parent: Mobile
-title: Mobile Framework
+parent: Mobile Framework
+title: Analytics
 description: Using Analytics
-category: mobile
+category: develop
 ---
 
 ## Overview

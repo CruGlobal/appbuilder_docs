@@ -1,6 +1,6 @@
 ---
 category: develop
-title: Development Environment Setup
+title: Dev Environment Setup
 parent: Develop
 ---
 

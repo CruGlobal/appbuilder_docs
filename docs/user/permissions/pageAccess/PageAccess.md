@@ -2,7 +2,7 @@
 parent: Permissions
 title: Page Access
 description: How to assign page permissions to different roles.
-category: permissions
+category: user
 ---
 Page access can be handled in two ways in AppBuilder. By default a module is visible to any [site role](../roles/Roles.md#site-roles) that has been given access. If more fine grained control is needed the
 [Access Management Page (AMP)](#access-management-page) can be used to assign access to specific sub pages and tabs based on [AppBuilder roles](../roles/Roles.md#appbuilder-roles).

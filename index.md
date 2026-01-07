@@ -20,7 +20,7 @@ This site is your comprehensive resource for learning, using, and contributing t
 - **Internal Links:** Click on links within the documentation to jump between related topics.
 - **Images & Examples:** Many pages include screenshots and code snippets to help you understand concepts quickly.
 - **Breadcrumbs:** Use the breadcrumbs at the top of each page to navigate back to parent topics.
-- **Contributing:** Want to improve the docs? See the [Contributing Guide](CONTRIBUTING.md) for how to add or update content.
+- **Contributing:** Want to improve the docs? See the [Contributing Guide](https://cruglobal.github.io/appbuilder_docs/CONTRIBUTING/) for how to add or update content.
 
 ## Running Locally
 

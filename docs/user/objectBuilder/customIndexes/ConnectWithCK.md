@@ -2,7 +2,7 @@
 title: Connecting Records Using a Custom Index
 description:
 category: objectBuilder
-parent: objectBuilder
+parent: Object Builder
 ---
 ## Instructions
 

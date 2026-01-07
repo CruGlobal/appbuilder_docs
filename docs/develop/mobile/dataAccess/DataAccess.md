@@ -1,8 +1,8 @@
 ---
-parent: Mobile
-title: Mobile Framework
+parent: Mobile Framework
+title: Framework Objects
 description: Framework Objects and Local Data
-category: mobile
+category: develop
 ---
 ## Overview
 

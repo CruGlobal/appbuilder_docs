@@ -2,7 +2,7 @@
 parent: Permissions
 title: Roles
 description: Adding and assigning user roles
-category: permissions
+category: user
 ---
 Currently 2 types of roles are used, site roles (opsportal) and AppBuilder roles. In most cases users will need at least one of each role type.
 

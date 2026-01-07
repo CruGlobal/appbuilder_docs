@@ -2,7 +2,7 @@
 parent: Processes
 title: System Task&#58; Insert Record
 description: dynamically create records from a process
-category: process
+category: user
 ---
 
 This is a task that can be added to a process to insert a record using relevant data from the process.

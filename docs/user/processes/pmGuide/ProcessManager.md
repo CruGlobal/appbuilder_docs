@@ -1,7 +1,8 @@
 ---
+parent: Processes
 title: Process Manager Guide
-category: process
-parent: 
+category: user
+description: create process using visual design
 ---
 ## BPMN Basics
 

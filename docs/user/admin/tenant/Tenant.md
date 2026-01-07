@@ -1,6 +1,7 @@
 ---
 title: Adding Tenant
 category: admin
+parent: Admin
 ---
 
 ## To create a new Tenant: 
