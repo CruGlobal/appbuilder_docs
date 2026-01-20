@@ -18,7 +18,7 @@ The key considerations for end-to-end testing are:
 
 [cypress.io](https://www.cypress.io/) meets these requirements, and is a lightweight framework chosen to do testing for our products.
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](../images/image2.png "image_tooltip")
 
 Important concepts for testing are:
 
@@ -73,7 +73,7 @@ cypress run
 
 - See [cypress.io Continuous Integration Guide](https://docs.cypress.io/guides/guides/continuous-integration.html#Travis) for use with Travis-CI
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](../images/image1.png "image_tooltip")
 
 ## Integrating into a project
 
@@ -100,7 +100,7 @@ Adding the following targets allows cypress to be run using `npm run`:
 
 Chrome Extensions are available, which enable “test script recording” in cypress’s output format.
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](../images/image3.png "image_tooltip")
 
 Once a series of clicks has been recorded, the resulting output can be copied into a .js within the cypress directory structure.
 

@@ -69,4 +69,4 @@ This is my system for allowing a user to access and edit 3 tiers of objects. For
 This is being used for Expense reports. A user can have many Expense Reports(trip to conference, office supplies), each of whitch can have many children(lunch, room), each of which can then have multipile children(recipt 1, receipt 2).
 This structure means a user has to open "Trip to Conference" before editing the "Room."
 
-![alt_text](pagestructureexample1.png "image_tooltip")
+![alt_text](../pagestructureexample1.png "image_tooltip")

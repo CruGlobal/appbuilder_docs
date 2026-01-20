@@ -18,7 +18,7 @@ These roles are used to assign permissions for AppBuilder, Ops Portal, and Acces
 1. Click the **add** button
 1. Give the role a name, description and check any permissions it should have.
 
-![](images/op_roles.png)
+![](../images/op_roles.png)
 
 ### Assign a Role
 
@@ -29,7 +29,7 @@ These roles are used to assign permissions for AppBuilder, Ops Portal, and Acces
 1. Select the Scope (in most cases ‘All Users’)
 1. Click **Add**
 
-![](images/op_assign_role.png)
+![](../images/op_assign_role.png)
 
 ## AppBuilder Roles
 
@@ -41,12 +41,12 @@ User with an AppBuilder Role will still need a Site Role that gives them access 
 
 1. In AppBuilder go to the Administration Page
 
-![](images/ab_admin.png)
+![](../images/ab_admin.png)
 
 2. In the ‘Roles’ tab click ‘Create new role’
 1. Add a Name and then ‘Save’
 
-![](images/ab_role.png)
+![](../images/ab_role.png)
 
 ### Assign a Role
 
@@ -56,4 +56,4 @@ User with an AppBuilder Role will still need a Site Role that gives them access 
 1. Click Add a user
 1. Select the user from the popup and click save
 
-![](./images/ab_assign_role.png)
+![](.././images/ab_assign_role.png)

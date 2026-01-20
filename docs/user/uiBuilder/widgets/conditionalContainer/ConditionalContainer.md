@@ -39,7 +39,7 @@ Now we just have to filter the data collection properly.
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](../images/image1.png "image_tooltip")
 
 
 **Heres a more practical example:**
@@ -54,19 +54,19 @@ OR status == rejected
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](../images/image2.png "image_tooltip")
 
 
 Here are some example Expense Reports with different Statuses
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](../images/image3.png "image_tooltip")
 
 
 What is a Status? It is a select-list option. We could use checkboxes, but I think there could be different statuses in the future, so I’m using the more open-ended status option.  \
  \
 **A very important part **of creating this select list is setting the **DEFAULT **option.  
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](../images/image4.png "image_tooltip")
 
 
 We will also need a special form where a user can change the status -- but we need to lock it so the user can ONLY set the status to submitted. How? Record rules! \
@@ -75,9 +75,9 @@ We will also need a special form where a user can change the status -- but we ne
 First I make a form, and remove all fields, those I leave I disable. Don’t want the user to accidentally make changes at this point. The text on the ‘save’ button is customised to show what it does \
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](../images/image5.png "image_tooltip")
  \
 And when the user clicks it, this is what is actually updated. \
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](../images/image6.png "image_tooltip")

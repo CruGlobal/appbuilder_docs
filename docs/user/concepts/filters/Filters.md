@@ -4,7 +4,7 @@ category: user
 title: AppBuilder Filters
 ---
 Filters can be used in many places within AppBuider to narrow down a set of records. A filter rule looks like this:
-![](./images/filters.png)
+![](.././images/filters.png)
 
 1. **And/Or:** 'And' or 'Or' is used when you have multiple filter rules, to determine how to apply the rules. If all the rules should be true then select AND if only one of the rules needs to be true then select OR
 1. **Field:** This is the Object Field to use in the filter.

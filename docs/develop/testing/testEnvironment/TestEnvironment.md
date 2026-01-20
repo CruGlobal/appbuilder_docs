@@ -38,18 +38,18 @@ $`npm run cypress:open`
 
 Cypress open will give you this window where you can run any test in `/integration`:
 
-![alt_text](images/cylist.png "image_tooltip")
+![alt_text](../images/cylist.png "image_tooltip")
 
 There are two places you will spend your time working:
 
 The logic: what buttons are clicked, typed in, and checked to see if data saved properly
 
-![alt_text](images/test1.png "image_tooltip")
+![alt_text](../images/test1.png "image_tooltip")
 
 The interface: this JSON is what is accessed by the 'cyInterfaceCARS' in the logic.
 
-![alt_text](images/test2.png "image_tooltip")
+![alt_text](../images/test2.png "image_tooltip")
 
 (VScode will prompt you with a variable on the logic side if it exists in the structure)
 
-![alt_text](images/test3.png "image_tooltip")
+![alt_text](../images/test3.png "image_tooltip")

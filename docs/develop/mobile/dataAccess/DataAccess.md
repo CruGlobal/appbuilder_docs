@@ -281,7 +281,7 @@ So, if you wanted to follow this same pattern, I'd start by:
 Note, this is two seperate movements
 user's QR code from Server to Mobile
 Server's list of Data collections from Server to Mobile\
-![alt_text](connectapptoserver.jpeg "image_tooltip")
+![alt_text](../connectapptoserver.jpeg "image_tooltip")
 
 
 Note that {{if}} can do basic compares, if you need comparison of objects, use {{js_if}}

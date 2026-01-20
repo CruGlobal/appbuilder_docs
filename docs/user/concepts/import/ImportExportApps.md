@@ -16,20 +16,20 @@ This is recommended in most cases. Files exported in this method are referred to
 
 From AppBuilder select the Export Button in the menu to download the `appbuilder.json` file.
 
-![](images/export.png)
+![](../images/export.png)
 
 ### Exporting Individual Apps
 
 Alternatively a Single App can be exported (here referred to as `app.json`).
 From AppBuilder select the cog beside your app. Then click export from the menu.
 
-![](images/export-1.png)
+![](../images/export-1.png)
 
 ## Importing
 
 Importing works the same regardless of the export method. Click Import from the menu bar in AppBuilder. Then select an `appbuilder.json` or `app.json` file to upload. After importing the server needs to be restarted.
 
-![](images/import.png)
+![](../images/import.png)
 
 ## Before you import:
 
