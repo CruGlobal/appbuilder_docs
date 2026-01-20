@@ -1,5 +1,5 @@
 ---
-parent: Creating a New Plugin
+parent: Develop
 title: Creating a New Plugin
 description: Adding a new AB plugin
 category: develop
