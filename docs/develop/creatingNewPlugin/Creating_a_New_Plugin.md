@@ -21,7 +21,7 @@ appbuilder plugin view
 ```
 If you execute `appbuilder plugin` it will detail your options... For example `appbuilder plugin new` will create an empty plugin, while `view` sets up boilerplate. 
 
-![alt_text](cli_init.webp "cli_init")
+![alt_text](./cli_init.webp "cli_init")
 
 This will create a new directory in your project: 
 `ab/develop/plugins`
