@@ -21,11 +21,11 @@ appbuilder plugin view
 ```
 If you execute `appbuilder plugin` it will detail your options... For example `appbuilder plugin new` will create an empty plugin, while `view` sets up boilerplate. 
 
-![alt_text](./cli_init.webp "cli_init")
+![cli_init](../cli_init.webp "cli_init")
 
 This will create a new directory in your project: 
 `ab/develop/plugins`
-![alt_text](file_list.webp "file_list")
+![file_list](../file_list.webp "file_list")
 
 Make sure you setup any submodules in that directory 
 ```
@@ -33,16 +33,16 @@ npm i
 npm run watch
 ```
 If there are no errors it should look similar to this:
-![alt_text](compile_plugin.webp "compile_plugin")
+![alt_text](../compile_plugin.webp "compile_plugin")
 
 ## Possible sources of errors
 You will find a `manifest.json` in your new plugin. Make sure it references files that actually exist!
-![alt_text](manifest_json.webp "manifest_json")
+![alt_text](../manifest_json.webp "manifest_json")
 
 If your appbuilder breaks, you can open the database and remove broken references to plugin files. These are screenshots from a working system. Note how `ABMinimode_web.mjs` is a file in `/dev/`. If the file name was, say, `ABMinimode_web.js` your appbuilder would fail to load! 
 
-![alt_text](database_plugin_links.webp "database_plugin_links")
-![alt_text](plugin_links_object.webp "plugin_links_object")
+![alt_text](../database_plugin_links.webp "database_plugin_links")
+![alt_text](../plugin_links_object.webp "plugin_links_object")
 
 ## Adding To Docker
 
@@ -72,8 +72,8 @@ services:
 
 The plugin code is in docker, but it isn't getting loaded yet! We need to go to `site administration`/`Plugins` and `+ Add` it. 
 console_logs
-![alt_text](adding_plugin.webp "adding_plugin")
+![alt_text](../adding_plugin.webp "adding_plugin")
 
 After refreshing the page, the plugin will be active. I had a simple console log:
 
-![alt_text](console_logs.webp "console_logs")
+![alt_text](../console_logs.webp "console_logs")
