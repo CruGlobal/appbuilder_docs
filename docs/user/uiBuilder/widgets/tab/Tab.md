@@ -8,9 +8,9 @@ The tab widgets display a set of tabs. Each tab can contain it's own set of widg
 
 ## Editing
 
-When editing the tab widget a list of tabs is displayed. Use the properties panel to add a tab. Reorder tabs with the arrows beside the names. Edit the tab name and icon with the edit button ![](images/editName.png) beside the name.
+When editing the tab widget a list of tabs is displayed. Use the properties panel to add a tab. Reorder tabs with the arrows beside the names. Edit the tab name and icon with the edit button ![](../images/editName.png) beside the name.
 
-To add widget or edit a tab, select it from the tab bar. Then use the green edit button in the top right ![](images/editWidget.png).
+To add widget or edit a tab, select it from the tab bar. Then use the green edit button in the top right ![](../images/editWidget.png).
 
 ## Properties
 

@@ -12,7 +12,7 @@ Displays a menu bar with a title and links to other pages.
 **Orientation** - Choose to display the menu horizontally or vertically.
 
 **Button Style** - Choose the button style.\
-![](images/buttonStyle.png)
+![](../images/buttonStyle.png)
 
 **Menu Alignment** - Choose whether to align the menu Left, Center or Right.\
 _Note: When using the toolbar, **Menu Position** decides in which region (left, center or right) the menu displays. Alignment adjusts within the region. In most cases using the same choice for each setting is best._
@@ -24,7 +24,7 @@ _Note: When using the toolbar, **Menu Position** decides in which region (left, 
 **Toolbar padding** - Adjust the extra space added to the toolbar around the content.
 
 **Toolbar theme** - Select the theme to use.\
-![](images/theme.png)
+![](../images/theme.png)
 
 **Menu Position** - Choose where the menu displays (see note on alignment).
 
@@ -38,5 +38,5 @@ Select the pages to display. Click to change the name displayed, enter to save. 
 ### Drag and Drop
 
 Further customize the menu by dragging pages to reorder them or to group it underneath another page.\
-![](images/nested.png)\
+![](../images/nested.png)\
 Click a page to choose an icon for improved

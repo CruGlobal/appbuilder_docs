@@ -8,7 +8,7 @@ A grid can be used a selector, where selecting a specific item from the grid tha
 
 We use this in our **Style Guide > List with grid selectors** to show a list of actors. Clicking an actor displays there details on the right.
 
-![](images/image1.png)
+![](../images/image1.png)
 
 ## Instructions
 

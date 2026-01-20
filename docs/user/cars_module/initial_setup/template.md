@@ -56,4 +56,4 @@ User with an AppBuilder Role will still need a Site Role that gives them access 
 1. Click Add a user
 1. Select the user from the popup and click save
 
-![](.././images/ab_assign_role.png)
+![](../images/ab_assign_role.png)
