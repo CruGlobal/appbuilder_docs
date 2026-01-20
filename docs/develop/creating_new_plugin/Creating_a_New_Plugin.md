@@ -1,7 +1,7 @@
 ---
-parent: Mobile Framework
+parent: Creating a New Plugin
 title: Creating a New Plugin
-description: Using 
+description: Adding a new AB plugin
 category: develop
 ---
 
