@@ -32,6 +32,9 @@ Make sure you setup any submodules in that directory
 npm i
 npm run watch
 ```
+
+If there are errors, check the `webpack` files!
+
 If there are no errors it should look similar to this:
 ![alt_text](../compile_plugin.webp "compile_plugin")
 
