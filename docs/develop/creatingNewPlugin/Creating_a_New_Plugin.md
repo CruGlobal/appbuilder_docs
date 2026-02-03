@@ -74,6 +74,8 @@ services:
 ## Loading the Plugin 
 
 The plugin code is in docker, but it isn't getting loaded yet! We need to go to `site administration`/`Plugins` and `+ Add` it. 
+![alt_text](../site_administration.webp "Location of plugin administration")
+
 console_logs
 ![alt_text](../adding_plugin.webp "adding_plugin")
 
