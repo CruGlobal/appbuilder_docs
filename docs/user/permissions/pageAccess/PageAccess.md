@@ -11,16 +11,16 @@ Page access can be handled in two ways in AppBuilder. By default a module is vis
 
 1. From AppBuilder select the cog beside the module and choose setting
 
-![](../images/image8.png)
+![](../images/image8.webp)
 
 2. Under ‘Who can use the app?’ find a check the role
 3. Click **Save**
 
-![](../images/image6.png)
+![](../images/image6.webp)
 
 4. That role can now see all root pages in the module. From the user interface builder you can open a root page and change the Page Permissions in the Properties panel.
 
-![](../images/image2.png)
+![](../images/image2.webp)
 
 ## Access Management Page
 
@@ -28,11 +28,11 @@ Page access can be handled in two ways in AppBuilder. By default a module is vis
 
 In AppBuilder Click on the cog beside an App and select ‘Edit’
 
-![](../images/image8.png)
+![](../images/image8.webp)
 
 1. Select **Enable Page/Tab Access Management**
 
-![](../images/image5.png)
+![](../images/image5.webp)
 
 2. Select **by Role** and add the Builder Role (‘Full Access’ on Trial). If any other role or account should be able to manage page access add them too.
 3. Save
@@ -41,21 +41,21 @@ In AppBuilder Click on the cog beside an App and select ‘Edit’
 
 1. In the live view of the module select the lock icon (top right) to open the Access Management Tab
 
-![](../images/image1.png)
+![](../images/image1.webp)
 
 2. In the tab select **Add Role**
 
-![](../images/image10.png)
+![](../images/image10.webp)
 
 3. then in the pop-up choose the role and click **Add**
 
-![](../images/image3.png)
+![](../images/image3.webp)
 
 4. You should now see a list of Pages and Tabs. To preview a page click the
-   ![](../images/image4.png) icon.
+   ![](../images/image4.webp) icon.
 
-![](../images/image7.png)
+![](../images/image7.webp)
 
 5. To Change Access Click on the Circle next to the page name and select the appropriate access level.
 
-![](../images/image11.png)
+![](../images/image11.webp)

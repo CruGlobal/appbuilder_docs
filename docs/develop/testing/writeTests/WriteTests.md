@@ -58,10 +58,10 @@ You will want to include `test\setup\common.js` as it contains some common code 
 
 1. Click the cypress recorder icon
 1. Click 'Start Recording'\
-   ![](images/cr_record.png)
+   ![](images/cr_record.webp)
 1. Perform the actions you want to test
 1. Open the recorder and click 'Copy to Clipboard'\
-   ![](images/cr_copy.png)
+   ![](images/cr_copy.webp)
 1. Paste it into a test file
    ```js
    it("my test", () => {

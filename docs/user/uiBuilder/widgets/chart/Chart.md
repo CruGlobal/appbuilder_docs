@@ -8,7 +8,7 @@ The Chart widget allows data to displayed in a graph.
 
 The Chart widget itself is a container that has properties to load data. An additional widget must be added to it to display the data in the desired chart type. Multiple Charts can be added to one Chart widget, but they will share the same data.
 
-![](../images/addWidget.png)
+![](../images/addWidget.webp)
 
 ## Properties
 
@@ -55,7 +55,7 @@ Most chart types show these properties along with custom options explained below
 ### Pie
 
 **Chart Type** - Choose from the three display types\
-![](../images/pie.png)
+![](../images/pie.webp)
 
 **Inner Font Size** - Adjust the font displaying the values on the chart
 
@@ -64,19 +64,19 @@ Most chart types show these properties along with custom options explained below
 **Chart Type** - Choose to display the bars horizontally or vertically
 
 **Chart Preset** - Choose how the bars will display.\
-![](../images/bar.png)
+![](../images/bar.webp)
 
 ### Line
 
 **Chart Type** - This determines the line shape. Line is straight, spline is curved.\
-![](../images/line.png)
+![](../images/line.webp)
 
 **Chart Preset** - This selects the shape of the value points on the line.\
-Plot ![](../images/plot.png),
-Diamond ![](../images/diamond.png),
-Simple ![](../images/simple.png)
+Plot ![](../images/plot.webp),
+Diamond ![](../images/diamond.webp),
+Simple ![](../images/simple.webp)
 
 ### Area
 
 **Chart Type** - This setting effects how multiple series display\
-![](../images/area.png)
+![](../images/area.webp)

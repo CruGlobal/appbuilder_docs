@@ -7,7 +7,7 @@ category: develop
 ## Overview
 
 this is WIP, example code 
-![alt_text](../mobile-custom.jpg "mobile-custom")
+![alt_text](../mobile-custom.webp "mobile-custom")
 
 this is what is running in the other tabs:
 

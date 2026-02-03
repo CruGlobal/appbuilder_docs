@@ -23,7 +23,7 @@ This is a fully filled out report document, you can compare to your result to kn
 
 These allow us to download this report
 
-![](../images/getreport.jpg)
+![](../images/getreport.webp)
 
 Now! it is possible to download this report simply with the 
 
@@ -34,13 +34,13 @@ button on the children page.
 
 But blank fields will be shown on this report. 
 Here is the template, hopefully this will help if your output seems to be missing anything
-![](../images/reportpage1.jpg)
-![](../images/reportpage2.jpg)
-![](../images/reportpage3.jpg)
-![](../images/reportpage4.jpg)
-![](../images/reportpage5.jpg)
-![](../images/reportpage6.jpg)
-![](../images/reportpage7.jpg)
-![](../images/reportpage8.jpg)
-![](../images/reportpage9.jpg)
-![](../images/reportpage10.jpg)
+![](../images/reportpage1.webp)
+![](../images/reportpage2.webp)
+![](../images/reportpage3.webp)
+![](../images/reportpage4.webp)
+![](../images/reportpage5.webp)
+![](../images/reportpage6.webp)
+![](../images/reportpage7.webp)
+![](../images/reportpage8.webp)
+![](../images/reportpage9.webp)
+![](../images/reportpage10.webp)

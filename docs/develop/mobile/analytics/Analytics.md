@@ -28,7 +28,7 @@ ex:
 analytics.event("QR scan");
 analytics.logError(err);
 
-![alt_text](../countlyeventmanage.png "image_tooltip")
+![alt_text](../countlyeventmanage.webp "image_tooltip")
 
 ## HTML pages
 

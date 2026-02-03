@@ -85,21 +85,21 @@ _Note: If the field is set to required in the Object definition, it will be set 
 #### Textbox
 
 **Type** - Set the textbox type: Single line, Multiple Lines, Rich editor
-![](../images/text.png)
+![](../images/text.webp)
 
 #### Connected Records
 
 **Add New Form/Edit Form** - Link an add or edit page for the connected record.\
-![](../images/addForm.png)
+![](../images/addForm.webp)
 
 **Filter Options** - Use [filters](../../../concepts/filters/Filters.md) to exclude records as options when filling out the form
 
 #### Number Box
 
 **Plus/Minus Buttons** - Select to show a plus and minus button on each side of the number box.\
-![](../images/numbox.png)
+![](../images/numbox.webp)
 
 #### Select list
 
 **Type** - Choose between a drop down select list and radio
-![](../images/select.png)
+![](../images/select.webp)

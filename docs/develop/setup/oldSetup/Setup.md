@@ -39,7 +39,7 @@ $ appdev dockerInstall appBuilder
 ```
 
 This will create an appBuilder/ directory with everything needed to start up our docker install.
-![directoryStructure](images/setup_appbuilder_directory.png "Directory Structure")
+![directoryStructure](images/setup_appbuilder_directory.webp "Directory Structure")
 
 [todo: discuss the directory][todo: start chrome debugger ]
 [todo: command to start Docker and watch loading progress in Chrome Debugger]

@@ -11,4 +11,4 @@ In the properties panel use **Add Column** to create a view container inside the
 
 ## Example Use
 
-![](../images/example.png)
+![](../images/example.webp)

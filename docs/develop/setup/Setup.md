@@ -117,7 +117,7 @@ cd {install_dir}
 ```
 
 When you see the following screen, it means that the AppBuilder stack has successfully loaded.
-![](images/appbuilderUp.png)\
+![](images/appbuilderUp.webp)\
 In a browser open:
 
 [`http://127.0.0.1:{port_number}`](http://127.0.0.1)

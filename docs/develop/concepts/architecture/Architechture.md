@@ -8,7 +8,7 @@ layout: page
 AppBuilder implements an Microservice Archtecture with a number of containerized services. Services are run in docker containers, typically deployed through docker swarm.
 Services are typically written in NodeJs based off of the nodejs docker image.
 
-![](./images/AB-architecture.png)
+![](./images/AB-architecture.webp)
 
 ## AB Services
 

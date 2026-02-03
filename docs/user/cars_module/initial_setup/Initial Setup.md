@@ -24,7 +24,7 @@ Because of the way we set up our system, even single-home setups will need to ha
 
  Click "add new row" and then put in the name of your project
 
-![](images/addprj.jpg)
+![](images/addprj.webp)
 
 ## Adding Home
 
@@ -32,10 +32,10 @@ Once you have the project, add a 'home'
 
 This can be done on the front end from the top tab.
 
-![](images/addhome.jpg)
+![](images/addhome.webp)
 
 On this form, make sure to select the project you just made.
-![](images/addhomepopup.jpg)
+![](images/addhomepopup.webp)
 
 ## Add Homes  Staff 
 
@@ -55,12 +55,12 @@ Set up user
 ### Create user, permissions
 
 The first stet to allowing staff to access the system is adding login credentials. 
-![](images/adduser.jpg)
+![](images/adduser.webp)
 The form should look like this before you're ready to save. 
 
 I recommend telling the user to set their own password once their user is made. 
 
-![](images/newuserform.jpg)
+![](images/newuserform.webp)
 
 While you're on this screen, type in the user's name (if they aren't on the first page)
 
@@ -68,7 +68,7 @@ Then open their settings, and give them the "CARs user" scope. This will allow t
 
 (only!) open the cars page on the sidebar. 
 
-![](images/addrole.jpg)
+![](images/addrole.webp)
 
 If you have multiple staff to add, you should repeat this step until they all have logins and system access permissions.
 
@@ -81,8 +81,8 @@ https://CruGlobal.github.io/appbuilder_docs/user/permissions/roles/Roles.html#as
 
 ### add Staff record
 go to this page on the CARs frontend
-![](images/addstaff.jpg)
+![](images/addstaff.webp)
 Select the user and project you recently added, 
 
 fill in any other information, and your new staff will be ready to log in and start adding data!
-![](images/addstaffform.jpg)
+![](images/addstaffform.webp)

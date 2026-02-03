@@ -34,7 +34,7 @@ _In this context the Dev, Staging, and Production refer to Apps within AppBuilde
    - At the end of Sprint Merge #develop to #master  (increment build number)
    - Significant changes can be added to a release branch for testing and bug fixes
 
-![](images/sprint-commits.png)
+![](images/sprint-commits.webp)
 - Bug fixes branch from master
   - Merge to #master (increment patch) and #develop
 - To patch bugs in old minor versions needed for live sites:
@@ -42,4 +42,4 @@ _In this context the Dev, Staging, and Production refer to Apps within AppBuilde
   - Create a new release on the patch branch
   - merge to #develop and #master
 
-![](images/patch-commits.png)
+![](images/patch-commits.webp)

@@ -8,7 +8,7 @@ description: create process using visual design
 
 The Process Manager uses bpmn notation format. The main elements are represented using these shapes:
 
-![](../images/bpmn_types.png)
+![](../images/bpmn_types.webp)
 
 ### More on BPMN
 
@@ -27,7 +27,7 @@ To start click the Start Event (Circle) then the Wrench and select the process s
 
 In the Properties Panel add a name that describes the trigger (this will show up as a label under the start event)
 Select the object and the action that starts the process.
-![](../images/set_up_trigger.png)
+![](../images/set_up_trigger.webp)
 
 ## Append Steps
 
@@ -37,13 +37,13 @@ Click on any symbol in your process and use the quick menu to append a task, eve
 ## Gateways
 
 Gateways are used to split the process based on a condition. Before configuring a gateway you should add at least two paths from your gateway. Then you can go back and add a condition for each path.
-![](../images/gateways.png)
+![](../images/gateways.webp)
 
 ## Tasks
 
 Three main classes of tasks can be added to a process. Depending on the choice different task types can be added.
 
-![](../images/task_setup.png)
+![](../images/task_setup.webp)
 
 ### Send Task
 
@@ -54,7 +54,7 @@ To work on message field using process variables (Query Task Save and Get Reset 
    - Get Reset Password Url Task: `{% raw %}{%= TASK_NAME.url %}{% endraw %}`
 
    Example:
-      ![](../images/send_task.png)
+      ![](../images/send_task.webp)
 
 
 
@@ -70,12 +70,12 @@ In most cases you will be making changes to the process object (the one that tri
 Add a name to describe the task then build the query as follows:
 
 1. Select ‘object’, the Object your process is based on, and then ‘find’
-   ![](../images/query_task.png)
+   ![](../images/query_task.webp)
 1. Add a filter and match the record that equals the process value at the process trigger (context)
-   ![](../images/query_task_filter.png)
+   ![](../images/query_task_filter.webp)
 1. Select ‘first’, then ‘update record’
 1. Click beside ‘update record’ and add the fields you want to edit
-   ![](../images/query_task_update.png)
+   ![](../images/query_task_update.webp)
 
 ### User Tasks
 
@@ -87,17 +87,17 @@ Then add ‘Who’ to determine who the approval task is sent to. This can be by
 ##### Customize the Form
 
 You can drag and drop from the available fields and add buttons.
-![](../images/approval_task_form.png)
+![](../images/approval_task_form.webp)
 
 ##### Dealing with the approval result
 
 Add a gateway after the approval task and the task options that would happen based on the approval result.
 
 In the gateway set the filter My Approval Task-> Response equals
-![](../images/approval_task_response.png)
+![](../images/approval_task_response.webp)
 
 Responses use the of the Button Component ‘Label’
-![](../images/approval_task_form_button.png)
+![](../images/approval_task_form_button.webp)
 
 ### Events
 

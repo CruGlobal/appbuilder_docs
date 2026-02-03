@@ -30,7 +30,7 @@ All four of these files have similar or identical names and seem to be associate
 
 To understand this, take a look at the diagram below, and particularly the red outlined portion.
 
-![alt_text](../images/image4.png "image_tooltip")
+![alt_text](../images/image4.webp "image_tooltip")
 
 ### Shared Layer
 
@@ -154,15 +154,15 @@ appbuilder/myqsl/init/
 An AppBuilder app has the following relational structure. At the topmost level is an **application**. The application contains lists of references to other entities: objects, queries, data collections, and interfaces (pageIDs). In the diagram below, different colors are used to illustrate the connections. In our diagram, we are using a generic name of _MyApp_.
 
 Note that the **id** field of each is typically a lengthy computer generated UUIDs (e.g., `138ff828-4579-412b-8b5b-98542d7aa152`), but we are using user-readable representations (e.g., `app001`) to help illustrate the connections between the various components.
-![alt_text](../images/image13.png)
-![alt_text](../images/image12.png)
+![alt_text](../images/image13.webp)
+![alt_text](../images/image12.webp)
 
-![alt_text](../images/image14.png)
-![alt_text](../images/image11.png)
+![alt_text](../images/image14.webp)
+![alt_text](../images/image11.webp)
 
 ### **Objects**
 
-![alt_text](../images/image9.png)
+![alt_text](../images/image9.webp)
 
 Each AppBuilder object is stored as its own table in the **appbuilder** database. For example, an AppBuilder object of the name _Contacts_ may exist as:
 
@@ -229,7 +229,7 @@ varchar(255)    Email </code></pre>
 
 #### **Query**
 
-![](images/image10.png)\
+![](images/image10.webp)\
 Queries within the AppBuilder are stored as an SQL view, which act as virtual tables. Within the database, they are named as follows:
 
 ```
@@ -239,7 +239,7 @@ view:   AB_AppName_ViewXYZ
 
 #### **Data Collections**
 
-![](images/image3.png)\
+![](images/image3.webp)\
 Data Collections are subsets of data that are useful from within the front-end. Therefore, they **_do not exist_** as independent entities in the database. Instead, these are fully defined within the **appbuilder_definition** table, with the type field set to **datacollection**.
 
 ```
@@ -254,7 +254,7 @@ updatedAt:  2020-09-24T20:56:18.000Z
 
 #### **Process**
 
-![](images/image7.png)
+![](images/image7.webp)
 
 Processes do not exist in the database, and are only found within the **appbuilder_definition** table
 
@@ -262,7 +262,7 @@ _todo: verify process information_
 
 #### **Interface**
 
-![alt_text](../images/image5.png "image_tooltip")
+![alt_text](../images/image5.webp "image_tooltip")
 
 Interface is the same as a visual UI element, such as a page, in the AppBuilder. These are defined within the **appbuilder_definitions** table, with the type field set as **view**.
 
@@ -290,7 +290,7 @@ Note that the _key_ field within the json field may define specific UI elements 
 
 > **_TODO:_** will this database potentially go away when OpsPortal is deprecated??
 
-**_NOTE:_** The contents of `appbuilder_definition` can be (partially) pulled via the AppBuilder interface by hitting the gear icon (<span class='tag'>![](images/image2.png)</span>) for any given app, and selecting export (<span class='tag'>![alt_text](../images/image1.png "image_tooltip")</span>)
+**_NOTE:_** The contents of `appbuilder_definition` can be (partially) pulled via the AppBuilder interface by hitting the gear icon (<span class='tag'>![](images/image2.webp)</span>) for any given app, and selecting export (<span class='tag'>![alt_text](../images/image1.webp "image_tooltip")</span>)
 
 <table>
   <tr>
@@ -325,7 +325,7 @@ Note that the _key_ field within the json field may define specific UI elements 
   </tr>
   <tr>
     <td>
-      <img src="images/image8.png" /><br />
+      <img src="images/image8.webp" /><br />
       <strong>Fields:</strong><br />
       <em>id</em><br /><br />
       <em>name</em><br /><br />

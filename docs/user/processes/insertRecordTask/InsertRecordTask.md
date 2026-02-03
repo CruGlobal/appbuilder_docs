@@ -9,7 +9,7 @@ This is a task that can be added to a process to insert a record using relevant 
 
 ## Add the task
 
-![](../images/addTask.png)
+![](../images/addTask.webp)
 
 ## Configure Properties
 
@@ -19,7 +19,7 @@ Object - Select the Object you wish to insert.
 ### Setting Values
 
 For each field in the Object you will see a dropdown with options for setting the field value. By default it will be 'not set'. Use this if you want to keep the value blank.
-![](../images/setValue.png)
+![](../images/setValue.webp)
 
 #### Set by Custom Value
 
@@ -28,7 +28,7 @@ Use this if you want to directly set the value. This supports using a custom ind
 #### Set by the root data
 
 This sets the value based on the record that triggered the project. From here you will see a dropdown number of options. All options are available, but you will need to consider the field types.
-![](../images/setFrom.png)
+![](../images/setFrom.webp)
 
 - **[primary key]** use this to set a connected record field (_1:M only_) as connected to the root Object. This will only work if the field you are setting is connected to the object you are connecting.
 - **field** the first options show any field in the root object. Pick what value you want. If the field you are setting is a string, numbers and indexes can be used but will be converted to a string
@@ -57,7 +57,7 @@ This allows a formula to be used to set the value. Both number and text formulas
 
 This allows you to use data saved from a Query Task. You will see a list of available parameters. Multiple values can be selected, but the first one with a value will be used. This is intended for when a process has multiple paths it could follow to get to the insert task.
 
-![](../images/queryParamater.png)
+![](../images/queryParamater.webp)
 
 ## Multiple Instances
 
