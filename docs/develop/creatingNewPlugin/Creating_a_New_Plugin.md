@@ -42,10 +42,6 @@ If there are no errors it should look similar to this:
 You will find a `manifest.json` in your new plugin. Make sure it references files that actually exist!
 ![alt_text](../manifest_json.webp "manifest_json")
 
-If your appbuilder breaks, you can open the database and remove broken references to plugin files. These are screenshots from a working system. Note how `ABMinimode_web.mjs` is a file in `/dev/`. If the file name was, say, `ABMinimode_web.js` your appbuilder would fail to load! 
-
-![alt_text](../database_plugin_links.webp "database_plugin_links")
-![alt_text](../plugin_links_object.webp "plugin_links_object")
 
 ## Adding To Docker
 
@@ -76,9 +72,17 @@ services:
 The plugin code is in docker, but it isn't getting loaded yet! We need to go to `site administration`/`Plugins` and `+ Add` it. 
 ![alt_text](../site_administration.webp "Location of plugin administration")
 
+###### Note that you can edit the widgets in `Site Administration and 
+
 console_logs
 ![alt_text](../adding_plugin.webp "adding_plugin")
 
 After refreshing the page, the plugin will be active. I had a simple console log:
 
 ![alt_text](../console_logs.webp "console_logs")
+
+# Advanced 
+If your appbuilder breaks, you can open the database and remove broken references to plugin files. These are screenshots from a working system. Note how `ABMinimode_web.mjs` is a file in `/dev/`. If the file name was, say, `ABMinimode_web.js` your appbuilder would fail to load! 
+
+![alt_text](../database_plugin_links.webp "database_plugin_links")
+![alt_text](../plugin_links_object.webp "plugin_links_object")
