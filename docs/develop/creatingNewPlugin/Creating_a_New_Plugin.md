@@ -15,6 +15,11 @@ category: develop
 - Add plugin in `site administration`
 
 ## Creating plugin
+get the latest cli tool
+```
+npm install -g CruGlobal/ab-cli
+```
+
 Ensure you have the CLI tool installed (see...)
 ```
 appbuilder plugin view
@@ -27,6 +32,12 @@ This will create a new directory in your project:
 `ab/develop/plugins`
 ![file_list](../file_list.webp "file_list")
 
+### Migrate 
+```$ 
+appbuilder plugin migrate view [] [ABView] command
+# like 
+appbuilder plugin migrate view [someTempName] ABViewList
+```
 Make sure you setup any submodules in that directory 
 ```
 npm i
@@ -80,6 +91,26 @@ console_logs
 After refreshing the page, the plugin will be active. I had a simple console log:
 
 ![alt_text](../console_logs.webp "console_logs")
+
+# Merging 
+remove from here 
+https://github.com/CruGlobal/plugin_ABDesigner/
+
+edit functionality goes here 
+https://github.com/CruGlobal/plugin_ABDesigner/tree/master/src/plugins
+
+remove from here
+https://github.com/CruGlobal/appbuilder_class_core
+
+remove from here and 
+https://github.com/CruGlobal/ab_platform_web/
+add here
+https://github.com/CruGlobal/ab_platform_web/tree/master/AppBuilder/platform/plugins 
+
+
+the tricky thing about making updates to ab_platform_web when what you currently have also depends on changes to the core code, is that you also have to make ab_platform_web's core point to the branch you updated on core.
+so you need to update this PR to also include core#new/plugin_x and that should stop the core from trying to reference these files you just removed.
+make sure to migrate from ABViewXCore
 
 # Advanced 
 If your appbuilder breaks, you can open the database and remove broken references to plugin files. These are screenshots from a working system. Note how `ABMinimode_web.mjs` is a file in `/dev/`. If the file name was, say, `ABMinimode_web.js` your appbuilder would fail to load! 
