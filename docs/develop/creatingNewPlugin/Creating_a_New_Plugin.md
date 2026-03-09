@@ -32,7 +32,7 @@ This will create a new directory in your project:
 `ab/develop/plugins`
 ![file_list](../file_list.webp "file_list")
 
-### Migrate 
+# Migrate 
 ```$ 
 appbuilder plugin migrate view [] [ABView] command
 # like 

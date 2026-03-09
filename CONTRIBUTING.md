@@ -104,6 +104,19 @@ This will create an index page linked from the parent category which list any pa
 - **Images & Examples:** Look for images and code snippets throughout the docs for visual guidance and practical examples.
 - **Contribute:** If you spot errors or have suggestions, check out the contributing guidelines above to help improve the documentation for everyone.
 
+
+## Running Locally
+
+You can run this documentation site locally to preview changes before publishing:
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Then open [http://localhost:4000](http://localhost:4000) in your browser.
+
+
 ---
 
 ## Run Site Locally
